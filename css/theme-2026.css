@@ -740,9 +740,28 @@ iframe {
   .clients_card { grid-template-columns: 1fr 1fr !important; }
 }
 
+@media (max-width: 767px) {
+  .hero-heading-sec { padding-top: 0.5rem; }
+  .cubespinner {
+    animation: none !important;
+    transform: none !important;
+    height: auto;
+  }
+  .cubespinner div {
+    position: relative !important;
+    transform: none !important;
+    display: none !important;
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(2.2rem, 11vw, 3rem) !important;
+  }
+  .cubespinner .face1 {
+    display: block !important;
+  }
+}
+
 @media (max-width: 575px) {
   .clients_card { grid-template-columns: 1fr !important; }
-  .cubespinner div { font-size: 2.1rem !important; width: min(92vw, 360px); }
 }
 
 /* View timeline polish for supporting browsers */
