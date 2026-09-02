@@ -1,0 +1,17 @@
+{
+  "name": "Elancier static site",
+  "install": "test -f index.html && test -f css/theme-2026.css",
+  "terminals": [
+    {
+      "name": "web-server",
+      "command": "python3 -m http.server 8080",
+      "description": "Serves the static Elancier site at http://localhost:8080"
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 8080
+    }
+  ]
+}
