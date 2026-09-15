@@ -13,8 +13,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
-EMPTY = ROOT / "src" / "plates" / "hero_empty.png"
-PROPS = ROOT / "src" / "plates" / "hero_props_key.png"
+EMPTY = ROOT / "src" / "plates" / "hero_brand_empty.png"
+PROPS = ROOT / "src" / "plates" / "hero_brand_cards.png"
 FRAMES = ROOT / "output" / "frames"
 OUT = ROOT / "output" / "elancier-hero-banner.mp4"
 PUBLIC = ROOT.parent / "public" / "assets" / "frontend" / "videos" / "elancier-hero-banner.mp4"
@@ -47,26 +47,23 @@ def unsharp(im: Image.Image, radius=1.4, percent=110, threshold=2) -> Image.Imag
 def magenta_key(im: Image.Image) -> Image.Image:
     rgb = np.asarray(im.convert("RGB")).astype(np.float32)
     r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
-    chroma = (r + b) * 0.5 - g
-    hard = (g < 78) & (r > 135) & (b > 85)
-    alpha = np.clip((88.0 - chroma) / 50.0, 0.0, 1.0)
+    key = np.array([216.0, 0.0, 93.0])
+    dist = np.sqrt((r - key[0]) ** 2 + (g - key[1]) ** 2 + (b - key[2]) ** 2)
+    hard = (g < 45) & (r > 155) & (b < 150) & (r > b + 40)
+    alpha = np.clip((dist - 26.0) / 38.0, 0.0, 1.0)
     alpha = np.where(hard, 0.0, alpha)
-    # kill leftover magenta-ish fringe
-    key_dist = np.sqrt((r - 237) ** 2 + (g - 12) ** 2 + (b - 183) ** 2)
-    alpha = np.where(key_dist < 70, 0.0, alpha)
 
     a8 = Image.fromarray((alpha * 255).astype(np.uint8), "L")
     a8 = a8.filter(ImageFilter.MinFilter(3))
-    a8 = a8.filter(ImageFilter.GaussianBlur(0.9))
+    a8 = a8.filter(ImageFilter.GaussianBlur(0.7))
     alpha = np.asarray(a8).astype(np.float32) / 255.0
 
-    # despill
-    spill = np.clip(chroma / 160.0, 0.0, 1.0) * (1.0 - alpha)
-    g2 = np.clip(g + spill * 40, 0, 255)
-    r2 = r * (1 - 0.35 * spill) + g2 * (0.35 * spill)
-    b2 = b * (1 - 0.25 * spill) + g2 * (0.25 * spill)
-    out = np.dstack([r2, g2, b2, alpha * 255]).astype(np.uint8)
-    out[alpha < 0.04] = 0
+    spill = np.clip((r - g) / 220.0, 0.0, 1.0) * (1.0 - alpha)
+    spill = np.where((r > 175) & (g < 70), spill, 0.0)
+    r2 = r * (1 - 0.45 * spill) + g * (0.45 * spill)
+    b2 = b * (1 - 0.25 * spill) + g * (0.25 * spill)
+    out = np.dstack([r2, g, b2, alpha * 255]).astype(np.uint8)
+    out[alpha < 0.05] = 0
     return Image.fromarray(out, "RGBA")
 
 
@@ -94,20 +91,26 @@ def prepare_plate(path: Path) -> Image.Image:
 def load_sprites() -> dict[str, Image.Image]:
     keyed = magenta_key(Image.open(PROPS))
     regions = {
-        "phone": (150, 170, 400, 640),
-        "chart": (400, 40, 800, 395),
-        "mol": (800, 40, 1155, 325),
-        "wire": (800, 375, 1160, 650),
+        "stack": (70, 70, 530, 640),
+        "script": (500, 30, 800, 260),
+        "years": (800, 85, 1240, 295),
+        "transform": (530, 305, 820, 520),
+        "checks": (840, 305, 1240, 670),
     }
-    # widths in the 3840-wide working plate
-    widths = {"phone": 268, "chart": 390, "mol": 340, "wire": 330}
+    widths = {
+        "stack": 430,
+        "script": 300,
+        "years": 400,
+        "transform": 250,
+        "checks": 340,
+    }
     out = {}
     for name, box in regions.items():
         spr = crop_alpha(keyed, box)
         nw = widths[name]
         nh = max(1, int(spr.height * (nw / spr.width)))
         spr = spr.resize((nw, nh), Image.Resampling.LANCZOS)
-        spr = unsharp(spr, radius=0.7, percent=60, threshold=2)
+        spr = unsharp(spr, radius=0.7, percent=55, threshold=2)
         out[name] = spr
         if os.environ.get("DEBUG") == "1":
             spr.save(ROOT / "output" / f"debug_{name}.png")
@@ -183,10 +186,11 @@ def render():
 
     # 1280-space anchors * SCALE
     anchors = {
-        "phone": (635 * SCALE, 370 * SCALE),
-        "chart": (820 * SCALE, 188 * SCALE),
-        "mol": (1028 * SCALE, 148 * SCALE),
-        "wire": (1172 * SCALE, 400 * SCALE),
+        "stack": (590 * SCALE, 345 * SCALE),
+        "script": (800 * SCALE, 175 * SCALE),
+        "years": (1025 * SCALE, 142 * SCALE),
+        "transform": (995 * SCALE, 458 * SCALE),
+        "checks": (1155 * SCALE, 348 * SCALE),
     }
 
     still = os.environ.get("STILL") == "1"
@@ -198,26 +202,29 @@ def render():
         k = pingpong(t)
         world = plate0.copy()
 
-        def place(name, amp_y, amp_x, rot_amp, cycles, phase, scale_amp=0.025):
+        def place(name, amp_y, amp_x, rot_amp, cycles, phase, scale_amp=0.02, shadow=True):
             ang = (t * cycles + phase) * math.pi * 2
             cx = anchors[name][0] + amp_x * math.sin(ang + 0.7)
             cy = anchors[name][1] + amp_y * math.sin(ang)
             rot = rot_amp * math.sin(ang + 0.4)
             sc = 1.0 + scale_amp * math.sin(ang * 0.5 + 0.2)
             spr = rotate_scale(sprites[name], rot, sc)
-            sh = shadow_under((spr.width, spr.height), 0.18 + 0.05 * math.sin(ang))
-            paste_center(world, sh, cx + 8, cy + spr.height * 0.42)
+            if shadow:
+                sh = shadow_under((spr.width, spr.height), 0.16 + 0.05 * math.sin(ang))
+                paste_center(world, sh, cx + 10, cy + spr.height * 0.40)
             paste_center(world, spr, cx, cy)
 
-        place("chart", 38, 16, -2.2, 1.0, 0.10)
-        place("mol", 32, 12, 10.5, 0.5, 0.55)
-        place("wire", 36, 18, 2.8, 1.0, 0.82)
-        place("phone", 44, 14, 3.2, 1.0, 0.28)
+        # back to front, matching the Elancier hero still
+        place("script", 16, 8, 1.6, 0.5, 0.05, 0.012, shadow=False)
+        place("years", 28, 11, -1.6, 1.0, 0.12)
+        place("checks", 26, 12, 1.5, 1.0, 0.58)
+        place("transform", 24, 9, 2.2, 1.0, 0.33)
+        place("stack", 20, 7, -0.9, 1.0, 0.08)
 
         # camera
-        zoom = 1.0 + 0.042 * k
-        cx = 0.545 + 0.022 * k
-        cy = 0.548 + 0.010 * k
+        zoom = 1.0 + 0.038 * k
+        cx = 0.558 + 0.018 * k
+        cy = 0.540 + 0.008 * k
         frame = crop_window(world.convert("RGB"), zoom, cx, cy)
 
         arr = np.asarray(frame).astype(np.float32) / 255.0

@@ -2,7 +2,8 @@
 
 Photoreal cinematic hero for [elancier.com](https://elancier.com/).
 
-Layered 18s loop: architectural plate plus independently floating glass UI, phone, analytics card, and cloud-node sculpture (seamless, professional motion — not a still zoom).
+Layered 18s loop of the Elancier branded hero still: laptop site, service pills, 13+ card, check list, client logos — with independently floating UI cards, camera drift, and light.
+
 
 - **Output:** `public/assets/frontend/videos/elancier-hero-banner.mp4`
 - **Format:** 1920×880, 24fps, 18s loop, H.264
