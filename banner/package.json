@@ -1,0 +1,13 @@
+{
+  "name": "elancier-hero-banner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "python3 scripts/render_cinematic.py",
+    "render:legacy-isometric": "node scripts/render.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.22.0",
+    "three": "^0.170.0"
+  }
+}

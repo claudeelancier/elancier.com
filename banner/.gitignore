@@ -1,0 +1,5 @@
+node_modules/
+output/frames/
+output/debug_*.png
+.DS_Store
+scripts/__pycache__/
