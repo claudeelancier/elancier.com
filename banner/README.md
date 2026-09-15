@@ -1,37 +1,20 @@
 # Elancier hero banner
 
-Procedural isometric motion graphic for the [elancier.com](https://elancier.com/) hero.
+Photoreal cinematic hero for [elancier.com](https://elancier.com/).
 
-- **Output:** `banner/output/elancier-hero-banner.mp4` (also copied to `public/assets/frontend/videos/`)
-- **Format:** 1920×880, 24fps, 20s seamless loop, H.264
-- **Left third:** empty studio field for headline overlay
-- **Right:** 3D “E” product atelier — glass delivery ring, service slabs, devices, stack chips
+The loop is a high-resolution architectural product still (matte white, glass, brushed metal, teal light) with a slow camera drift so every paused frame still reads as a commercial CGI plate.
 
-Brand palette used: indigo `#6366F1`, deep teal `#257072` (logo), coral `#FB7185`, gold `#E89800` / amber `#F5A623`, ink `#1E2233`, mist `#F5F4FB`.
+- **Output:** `public/assets/frontend/videos/elancier-hero-banner.mp4`
+- **Format:** 1920×880, 24fps, 16s seamless ping-pong, H.264
+- **Left field:** open sky / teal wash for headline overlay
+- **Right:** laptop, frosted-glass UI, device, analytics, cloud-node sculpture
+- **No** logos or marketing copy
 
-## Preview locally
-
-Serve `banner/` and open `/src/index.html`.
-
-```bash
-cd banner
-npm install
-python3 -m http.server 5173
-# http://127.0.0.1:5173/src/
-```
+Palette: pearl white, logo teal `#257072`, mint `#2DD4BF`, warm window light.
 
 ## Re-render
 
-Requires Google Chrome. Writes PNG/JPEG frames then encodes with ffmpeg.
-
 ```bash
 cd banner
-npm install
-npm run render
-```
-
-Still frame only:
-
-```bash
-STILL=1 STILL_TIME=6.2 npm run render
+python3 scripts/render_cinematic.py
 ```
