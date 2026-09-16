@@ -1,5 +1,3 @@
-/* Hero marble-run stage — sits in the existing .hero-visual column */
-
 .hero-visual{
   position:relative;
   height:min(540px, 62vw);
@@ -13,34 +11,124 @@
   border-radius:28px;
   overflow:hidden;
   background:
-    radial-gradient(120% 100% at 72% 42%, #ffffff 0%, #F7F6FD 46%, #EEEEFE 100%);
+    radial-gradient(120% 100% at 72% 38%, #ffffff 0%, #F7F6FD 48%, #EEEEFE 100%);
   border:1px solid rgba(255,255,255,.7);
   box-shadow:
     0 36px 80px rgba(18,12,34,.32),
     0 0 0 1px rgba(99,102,241,.08);
 }
 
-.hero-machine canvas{
+.hero-machine svg{
   display:block;
   width:100%;
   height:100%;
   max-width:none;
 }
 
-.hero-machine-fallback{
-  position:absolute;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  color:var(--ink-soft);
-  font-family:"Sora",sans-serif;
-  font-size:.9rem;
-  padding:24px;
-  text-align:center;
+/* Marbles riding the glass loop */
+.orb-loop{
+  offset-rotate: 0deg;
+  animation: rideLoop 7.5s cubic-bezier(.37,.01,.16,1) infinite;
+}
+.orb-loop.delay{ animation-delay: -3.6s; animation-duration: 9.2s; }
+@keyframes rideLoop{
+  0%{ offset-distance: 0%; }
+  100%{ offset-distance: 100%; }
 }
 
-.hero-machine.is-fallback .hero-machine-fallback{ display:flex; }
+.orb-maze{
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mazeDrift 5.8s ease-in-out infinite;
+}
+.orb-maze.b{ animation-duration: 6.6s; animation-delay: -.8s; }
+.orb-maze.c{ animation-duration: 7.4s; animation-delay: -1.6s; }
+@keyframes mazeDrift{
+  0%,100%{ transform: translate(0,0); }
+  25%{ transform: translate(28px,-10px); }
+  50%{ transform: translate(8px,22px); }
+  75%{ transform: translate(-22px,8px); }
+}
+
+.orb-amber{
+  animation: amberHop 11s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes amberHop{
+  0%,12%,100%{ transform: translate(0,0); }
+  18%{ transform: translate(42px,-18px); }
+  28%{ transform: translate(118px,-8px); }
+  40%,100%{ transform: translate(0,0); }
+}
+
+.gizmo-spin{
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spinSlow 10s linear infinite;
+}
+@keyframes spinSlow{ to{ transform: rotate(360deg); } }
+
+.pill-label{
+  opacity: 0;
+  transition: opacity .45s ease;
+}
+.hero-machine.is-web .pill-web,
+.hero-machine.is-play .pill-play,
+.hero-machine.is-store .pill-store{
+  opacity: 1;
+}
+.pill-base{
+  transition: fill .45s ease, filter .45s ease;
+}
+.hero-machine.is-web .pill-web-base,
+.hero-machine.is-play .pill-play-base,
+.hero-machine.is-store .pill-store-base{
+  fill: #6366F1;
+  filter: drop-shadow(0 10px 14px rgba(99,102,241,.28));
+}
+
+.cube{
+  animation: cubeDump 11s cubic-bezier(.2,.7,.2,1) infinite;
+  opacity: 0;
+}
+.cube.c2{ animation-delay: .18s; }
+.cube.c3{ animation-delay: .34s; }
+.cube.c4{ animation-delay: .5s; }
+@keyframes cubeDump{
+  0%,34%{ opacity:0; transform: translate(0,0) rotate(0); }
+  38%{ opacity:1; transform: translate(-6px,8px) rotate(12deg); }
+  52%{ opacity:1; transform: translate(-86px,46px) rotate(120deg); }
+  62%{ opacity:0; transform: translate(-120px,58px) rotate(180deg); }
+  100%{ opacity:0; transform: translate(0,0) rotate(0); }
+}
+
+.hopper{
+  transform-box: fill-box;
+  transform-origin: 70% 40%;
+  animation: hopperTip 11s ease-in-out infinite;
+}
+@keyframes hopperTip{
+  0%,34%,55%,100%{ transform: rotate(0); }
+  40%{ transform: rotate(-14deg); }
+}
+
+.machine-float{
+  animation: machineFloat 8s ease-in-out infinite;
+  transform-origin: 420px 280px;
+}
+@keyframes machineFloat{
+  0%,100%{ transform: translate(0,0) rotate(0deg); }
+  50%{ transform: translate(0,-6px) rotate(-0.4deg); }
+}
+
+.arch-glow{
+  animation: pulseGlow 3.6s ease-in-out infinite;
+}
+@keyframes pulseGlow{
+  0%,100%{ opacity:.55; }
+  50%{ opacity:1; }
+}
 
 @media (max-width:960px){
   .hero-visual{
@@ -59,5 +147,9 @@
 }
 
 @media (prefers-reduced-motion: reduce){
-  .hero-machine{ box-shadow:0 20px 48px rgba(18,12,34,.22); }
+  .orb-loop,.orb-maze,.orb-amber,.gizmo-spin,.cube,.hopper,.machine-float,.arch-glow{
+    animation: none !important;
+  }
+  .pill-web{ opacity:1; }
+  .pill-web-base{ fill:#6366F1; }
 }

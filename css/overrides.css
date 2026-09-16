@@ -110,3 +110,15 @@ html,body{ overflow-x:hidden; max-width:100%; }
   .site-header{ max-width:calc(100% - 20px) !important; }
   .site-header .nav-row{ padding:10px 16px !important; gap:14px !important; }
 }
+
+.brand-logo{
+  height:38px;
+  width:auto;
+  max-width:168px;
+  display:block;
+  object-fit:contain;
+}
+.site-footer .brand-logo{
+  height:34px;
+  filter:brightness(0) invert(1);
+}
