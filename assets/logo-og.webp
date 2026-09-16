@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="csrf-token" content="">
+<title>Page Not Found | Elancier Solutions</title>
+<meta name="description" content="This page doesn&amp;#039;t exist — but here&amp;#039;s how to get back on track with Elancier Solutions.">
+<link rel="canonical" href="https://elancier.com/storage/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#6366f1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Elancier Solutions">
+<meta property="og:title" content="Page Not Found | Elancier Solutions">
+<meta property="og:description" content="This page doesn&amp;#039;t exist — but here&amp;#039;s how to get back on track with Elancier Solutions.">
+<meta property="og:url" content="https://elancier.com/storage/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp">
+<meta property="og:image" content="https://elancier.com/storage/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp">
+<meta property="og:image:alt" content="Page Not Found | Elancier Solutions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page Not Found | Elancier Solutions">
+<meta name="twitter:description" content="This page doesn&amp;#039;t exist — but here&amp;#039;s how to get back on track with Elancier Solutions.">
+<meta name="twitter:image" content="https://elancier.com/storage/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp">
+<meta name="twitter:image:alt" content="Page Not Found | Elancier Solutions">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"@id":"https://elancier.com#organization","name":"Elancier Solutions","url":"https://elancier.com","logo":"https://elancier.com/storage/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp","email":"admin@elancier.com","telephone":"+91 81446 88721","address":{"@type":"PostalAddress","streetAddress":"94-19, 2nd floor, Mani Kothanar street, Bypass Rd, Sathyamoorthy Nagar, Madurai, Tamil Nadu 625016","addressCountry":"IN"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Elancier Solutions","url":"https://elancier.com"}</script>
+<link rel="icon" href="https://elancier.com/public/assets/frontend/images/favicon.png">
+
+<link rel="manifest" href="https://elancier.com/public/manifest.json">
+<link rel="apple-touch-icon" href="https://elancier.com/public/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://elancier.com/public/assets/frontend/images/favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://elancier.com/public/assets/frontend/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://elancier.com/public/assets/frontend/css/style.css">
+<style>
+  
+  /* Toast notifications for AJAX form submissions (contact, quick
+     contact, career application). Uses the same design tokens
+     (--violet/--coral/--teal/--ink/--line) as the rest of the site,
+     with hard-coded fallbacks in case a token isn't defined. */
+  .toast-container{position:fixed;top:20px;right:20px;left:auto;z-index:9999;display:flex;flex-direction:column;gap:10px;width:min(360px,calc(100vw - 32px));pointer-events:none}
+  .toast{pointer-events:auto;display:flex;align-items:flex-start;gap:10px;padding:14px 16px;border-radius:12px;background:#fff;box-shadow:0 12px 30px rgba(30,34,51,.16);border:1px solid var(--line,#E7E7F3);font-family:inherit;font-size:.92rem;line-height:1.45;color:var(--ink,#1E2233);opacity:0;transform:translateY(-10px);transition:opacity .25s ease,transform .25s ease}
+  .toast.is-visible{opacity:1;transform:translateY(0)}
+  .toast-icon{flex:0 0 auto;width:22px;height:22px;margin-top:1px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#fff}
+  .toast-success .toast-icon{background:var(--violet,#6366F1)}
+  .toast-error .toast-icon{background:var(--coral,#FB7185)}
+  .toast-body{flex:1 1 auto;min-width:0;word-break:break-word}
+  .toast-close{flex:0 0 auto;background:none;border:0;padding:0;margin-left:2px;color:var(--ink-faint,#767C94);cursor:pointer;font-size:1.05rem;line-height:1}
+  .toast-close:hover{color:var(--ink,#1E2233)}
+  .field.field-invalid input,.field.field-invalid textarea,.field.field-invalid select{border-color:var(--coral,#FB7185) !important}
+  @media (max-width:600px){.toast-container{left:16px;right:16px;top:14px;width:auto}}
+
+  /* ===== Mobile optimization ===================================
+     Scoped, additive rules only — nothing here removes or overrides
+     the site's own desktop/tablet styling above the breakpoints
+     used. Two parts:
+     1) Safe global guards that can only help, never regress an
+        already-working layout (no horizontal scroll, images that
+        can't overflow their container, comfortable tap targets, no
+        iOS auto-zoom on form focus).
+     2) A full, self-contained fix for the header's mobile nav /
+        Services mega-menu — the concretely broken behaviour shown in
+        testing: on a narrow viewport the desktop 3-column mega panel
+        renders at full desktop width and overlaps the page content
+        beneath it instead of collapsing into a proper mobile menu.
+        This owns its own "is-open" state end-to-end (see the script
+        below), so it works correctly regardless of whatever else the
+        site's main.js does with this markup — nothing here disables
+        or fights it, only adds a mobile-safe presentation layer. */
+  html,body{overflow-x:hidden;max-width:100%}
+  img,svg,video{max-width:100%;height:auto}
+  .nav-backdrop{display:none}
+  .nav-drawer-topbar{display:none}
+  .nav-drawer-footer{display:none}
+  /* Icons/arrows added to each mobile-drawer menu row stay hidden on
+     desktop and tablet — the desktop nav keeps its plain text pills,
+     unchanged. Only .nav-item-label (the existing link text) shows. */
+  .nav-item-icon,.nav-item-arrow,.nav-item-chevron{display:none}
+
+  /* Full-width layout: the site's .container was capped at a
+     narrow max-width, leaving large fixed empty gutters on wide
+     screens (see reference screenshots). Widened here — once, for
+     every page, since they all share this layout — with responsive
+     clamp() padding so content still never touches the viewport
+     edge, and without removing the cap entirely (which would make
+     text lines/cards unnaturally wide on very large screens). */
+  .container{max-width:1600px !important;padding-left:clamp(20px,4vw,64px) !important;padding-right:clamp(20px,4vw,64px) !important}
+
+  /* Premium pill-shaped header: sized to its own content
+     (width:fit-content) rather than stretched to a fixed max-width —
+     stretching it left a large empty gap after the nav links/toggle
+     (see reference screenshots), since a flex row using
+     justify-content:space-between only spreads elements apart when
+     there's leftover width to distribute. Explicit gaps below make
+     spacing consistent and deliberate regardless of container width.
+     Corners stay a full pill (border-radius:999px) at any height,
+     floated off the very top/sides with a soft shadow.
+     left:0 + right:0 + margin:auto is what actually centres it: for
+     a position:fixed/sticky/absolute element, margin:auto only
+     distributes evenly when BOTH edges are pinned — if the header's
+     real CSS sets only left:0 (no matching right:0), auto-margin has
+     nothing to distribute on the right, which left it hugging the
+     left edge with the gap bunched up on the right (see reference
+     screenshot). Explicitly pinning both sides fixes that regardless
+     of whether the header turns out to be fixed, sticky, or static
+     (harmless no-op in the static case, where margin:auto alone
+     already centres a block-level fit-content box). */
+  .site-header{
+    display:block;left:0 !important;right:0 !important;
+    width:fit-content !important;max-width:calc(100% - 32px) !important;
+    margin:0px auto 0 !important;border-radius:999px !important;
+    box-shadow:0 14px 34px rgba(20,20,40,.12) !important;
+    z-index:1480 !important;
+  }
+  .site-header .nav-row{
+    display:flex !important;align-items:center !important;
+    gap:clamp(16px,3vw,48px) !important;
+    padding:14px 30px !important;white-space:nowrap;
+  }
+  .site-header .nav-links{display:flex !important;align-items:center !important;gap:22px !important;margin:0;padding:0;list-style:none}
+  @media (max-width:640px){
+    .site-header{max-width:calc(100% - 20px) !important;}
+    .site-header .nav-row{padding:10px 16px !important;gap:14px !important}
+  }
+
+  /* Stat suffix (e.g. "+" / "k"): rendered as a sibling of the
+     animated counter <b>, never inside it — the counter script's
+     per-frame textContent writes to <b> can never touch or wipe out
+     a sibling element, only a child, which is exactly why it isn't
+     nested inside <b>. Both are wrapped together in .stat-value-wrap
+     so they're centred as one unit inside the ring; any pre-existing
+     rule that centres <b> directly via absolute positioning is
+     explicitly neutralised here so it can't fight with the
+     wrapper's own centring.
+     .stat-value-wrap--long (added server-side when the combined
+     value+suffix is 4+ characters, e.g. "1450") scales the group
+     down slightly so longer values still fit cleanly inside the
+     circle without overflowing its border. */
+  .stat-ring-wrap{position:relative}
+  .stat-ring-wrap .stat-value-wrap{
+    position:absolute !important;inset:0 !important;
+    display:flex !important;align-items:center !important;justify-content:center !important;
+    gap:1px;line-height:1;pointer-events:none;
+  }
+  .stat-ring-wrap .stat-value-wrap b{
+    position:static !important;top:auto !important;left:auto !important;right:auto !important;bottom:auto !important;
+    inset:auto !important;transform:none !important;
+  }
+  .stat-suffix{font-size:.85em;font-weight:inherit;line-height:1;white-space:nowrap}
+  .stat-value-wrap--long{transform:scale(.8)}
+  @media (max-width:640px){
+    .stat-value-wrap--long{transform:scale(.72)}
+  }
+
+  /* Compact stats card: the section was an oversized panel with a
+     circle stacked above its label and large empty padding — this
+     shrinks the panel and lays each circle+label out horizontally
+     (side by side, vertically centred, small fixed gap) instead.
+     Scoped under .stats-strip so the shared .grid/.grid-3/.grid-4
+     utility classes used elsewhere on the page are never touched. */
+  .stats-strip{padding:28px 24px !important}
+  .stats-strip .grid{
+    display:flex !important;flex-wrap:wrap !important;
+    justify-content:center !important;align-items:center !important;
+    gap:28px 48px !important;
+  }
+  .stats-strip .stat-item{
+    display:flex !important;flex-direction:row !important;align-items:center !important;
+    gap:12px !important;flex:0 0 auto !important;
+  }
+  .stats-strip .stat-ring-wrap{width:68px !important;height:68px !important;flex:0 0 auto}
+  .stats-strip .stat-ring-wrap b{font-size:1.1rem !important}
+  .stats-strip .stat-suffix{font-size:.75rem !important}
+  .stats-strip .stat-label{white-space:nowrap;font-size:.92rem;line-height:1.3}
+  @media (max-width:640px){
+    .stats-strip{padding:22px 18px !important}
+    .stats-strip .grid{gap:16px 26px !important}
+    .stats-strip .stat-ring-wrap{width:56px !important;height:56px !important}
+    .stats-strip .stat-ring-wrap b{font-size:.95rem !important}
+    .stats-strip .stat-label{font-size:.82rem;white-space:normal}
+  }
+
+  /* Dynamic grids: mirrors the site's own .grid-3-fit convention for
+     the 4-column sections (services / stats / industries) so a grid
+     built for a fixed count never reserves an empty trailing column
+     when there are fewer real records — it distributes the actual
+     items evenly across the available width instead. Purely
+     additive: existing .grid-4 usage elsewhere is untouched, this
+     only applies where the extra class is added. */
+  .grid.grid-4-fit{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+
+  /* Same idea for the header's Services mega-menu: it was fixed to
+     4 columns (one per original service), so 3 active services left
+     a blank 4th slot. auto-fit redistributes however many .mega-col
+     columns actually exist across the panel's width. */
+  header.site-header .mega-inner{grid-template-columns:repeat(auto-fit,minmax(180px,1fr)) !important}
+
+  @media (max-width:860px){
+    .btn,button,.nav-links a,.pf-filters button{min-height:44px}
+    input,select,textarea{font-size:16px}
+
+    /* Locks background scrolling while the drawer is open (position:fixed
+       is the robust cross-browser technique — plain overflow:hidden on
+       body alone still allows rubber-band scrolling on iOS Safari).
+       JS records the scroll offset before locking and restores it on close. */
+    body.mobile-nav-open{position:fixed !important;left:0;right:0;width:100%;overflow:hidden !important}
+
+    header.site-header .nav-cta .nav-toggle{
+      display:inline-flex !important;align-items:center;justify-content:center;
+      width:38px !important;height:38px !important;padding:0 !important;margin:0;border:0;
+      background:transparent;background-image:none !important;cursor:pointer;line-height:1;
+      color:var(--ink,#1E2233);position:relative;z-index:1440;
+      transition:background-color .15s ease,color .15s ease,transform .1s ease
+    }
+    header.site-header .nav-cta .nav-toggle::before,
+    header.site-header .nav-cta .nav-toggle::after{content:none !important;display:none !important}
+    header.site-header .nav-cta .nav-toggle:hover{background:var(--violet-soft,#EEF0FF)}
+    header.site-header .nav-cta .nav-toggle:active{transform:scale(.92)}
+    header.site-header .nav-cta .nav-toggle:focus-visible{outline:2px solid var(--violet,#6366F1);outline-offset:2px}
+    body.mobile-nav-open header.site-header .nav-cta .nav-toggle{background:var(--violet-soft,#EEF0FF);color:var(--violet,#6366F1)}
+    header.site-header .nav-toggle i{font-size:17px !important;line-height:1 !important}
+    /* Defensive: only ever show the exact controls this file owns.
+       If anything else injects an extra icon/button into these
+       containers, it's hidden rather than left to render alongside
+       ours — this is what actually enforces "only one" regardless
+       of what else may be touching this markup. */
+    header.site-header .nav-row > *:not(.brand):not(#navLinks):not(.nav-cta){display:none !important}
+    header.site-header .nav-cta > *:not(#navToggle){display:none !important}
+
+    /* The drawer. Every visual property that could plausibly be
+       overridden by an unrelated rule elsewhere (opacity, background,
+       visibility) is pinned explicitly here — a translucent or
+       misplaced drawer has been the actual observed bug, not just a
+       theoretical risk. z-index sits above the floating Assistant/
+       Quick Contact/WhatsApp buttons (all ≤1400) so the open drawer
+       + backdrop fully cover them rather than a button poking through.
+       Rounded left corners + a dedicated logo/close top bar + a footer
+       card give it the app-drawer look from the approved reference,
+       while every existing menu link, route and the Services
+       mega-menu keep the exact markup/logic they already had. */
+    header.site-header #navLinks{
+      position:fixed !important;top:0 !important;right:0 !important;left:auto !important;bottom:0 !important;
+      height:100vh !important;height:100dvh !important;
+      width:min(300px,84vw) !important;max-width:84vw !important;
+      margin:0 !important;padding:0 !important;
+      border-top-left-radius:22px !important;border-bottom-left-radius:22px !important;
+      background-color:#fff !important;background-image:none !important;
+      opacity:1 !important;visibility:visible !important;
+      backdrop-filter:none !important;-webkit-backdrop-filter:none !important;
+      display:flex !important;flex-direction:column !important;align-items:stretch !important;
+      list-style:none;gap:0 !important;overflow-y:auto;overflow-x:hidden;
+      -webkit-overflow-scrolling:touch;scroll-behavior:smooth;
+      box-shadow:-16px 0 40px rgba(20,20,40,.18);
+      transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);
+      z-index:1460
+    }
+    header.site-header #navLinks::before,
+    header.site-header #navLinks::after{content:none !important;display:none !important}
+    header.site-header #navLinks > *:not(li){display:none !important}
+    header.site-header #navLinks.is-open{transform:translateX(0) !important}
+    header.site-header #navLinks > li{width:100%;flex:0 0 auto}
+
+    /* Logo + close top bar: one compact row, equal padding on all
+       four sides (safe-area is added on top of — not instead of —
+       that base padding, so a notch never shrinks it), both elements
+       vertically centred, logo kept at its natural aspect ratio. */
+    header.site-header .nav-drawer-topbar{
+      display:flex !important;align-items:center;justify-content:space-between;gap:12px;
+      padding:calc(16px + env(safe-area-inset-top,0px)) 16px 16px !important;
+      border-bottom:1px solid var(--line,#EEE);margin-bottom:4px;flex:0 0 auto;
+    }
+    header.site-header .nav-drawer-brand{display:flex;align-items:center;pointer-events:none;line-height:0}
+    header.site-header .nav-drawer-logo{height:32px;width:auto;max-width:160px;display:block;object-fit:contain}
+    header.site-header .nav-links-close{
+      width:40px;height:40px;flex:0 0 auto;border-radius:10px;border:1px solid var(--line,#E7E7F3);background:#fff;
+      color:var(--ink,#1E2233);cursor:pointer;display:flex;align-items:center;justify-content:center;
+      transition:border-color .15s ease,color .15s ease,transform .1s ease
+    }
+    header.site-header .nav-links-close i{font-size:15px !important;line-height:1 !important}
+    header.site-header .nav-links-close:hover{border-color:var(--violet,#6366F1);color:var(--violet,#6366F1)}
+    header.site-header .nav-links-close:active{transform:scale(.92)}
+    header.site-header .nav-links-close:focus-visible{outline:2px solid var(--violet,#6366F1);outline-offset:2px}
+    header.site-header .nav-links-close::before,
+    header.site-header .nav-links-close::after{content:none !important}
+
+    /* Menu rows: icon + label + arrow/chevron, never overlapping or
+       truncated (label is the only flexible column, icon/indicator
+       are fixed-width so long labels simply wrap instead of clipping
+       the icon or the arrow). */
+    header.site-header #navLinks > li > a{
+      display:flex !important;align-items:center;gap:13px;
+      padding:12px 18px;font-size:.92rem;font-weight:600;line-height:1.3;
+      border-bottom:1px solid var(--line,#EEE);
+      position:relative;color:var(--ink,#1E2233);
+      transition:background-color .18s ease,color .18s ease
+    }
+    header.site-header .nav-item-icon{
+      flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;font-size:.85rem;
+      background:var(--violet-soft,#EEF0FF);color:var(--violet-dark,#4338CA);
+      transition:background-color .18s ease,color .18s ease
+    }
+    header.site-header .nav-item-label{flex:1 1 auto;min-width:0;overflow-wrap:break-word}
+    header.site-header .nav-item-arrow,
+    header.site-header .nav-item-chevron{
+      display:flex !important;align-items:center;justify-content:center;
+      flex:0 0 auto;width:16px;text-align:center;font-size:.72rem;color:var(--ink-faint,#767C94);
+      transition:transform .3s ease,color .18s ease
+    }
+
+    /* Active item: soft pill background on the whole row (icon badge
+       included) + short left accent bar — no long underline, no
+       extra height (padding/line-height match every other item). */
+    header.site-header #navLinks > li > a.active{
+      background:var(--violet-soft,#EEF0FF) !important;color:var(--violet-dark,#4338CA) !important;
+      font-weight:700;border-bottom-color:transparent !important; margin: 5px 0px;
+    }
+    header.site-header #navLinks > li > a.active::before{
+      content:'';position:absolute;left:6px;top:50%;transform:translateY(-50%);
+      width:3px;height:16px;border-radius:2px;background:var(--violet,#6366F1);
+    }
+    header.site-header #navLinks > li > a.active .nav-item-icon{background:var(--violet,#6366F1);color:#fff}
+
+    /* Services trigger: highlighted the same way while its submenu is
+       open, with the chevron rotating to show expanded state. */
+    header.site-header .has-mega.is-open > a{
+      background:var(--violet-soft,#EEF0FF) !important;color:var(--violet-dark,#4338CA) !important;font-weight:700;
+    }
+    header.site-header .has-mega.is-open > a .nav-item-icon{background:var(--violet,#6366F1);color:#fff}
+    header.site-header .has-mega.is-open > a .nav-item-chevron i{transform:rotate(180deg);color:var(--violet-dark,#4338CA)}
+
+    /* Submenu: collapsed by default (max-height:0, clipped). JS sets
+       an exact pixel max-height (measured from the content's real
+       scrollHeight) when opening, so it always fits completely —
+       no fixed guess that could clip a longer list, and no reliance
+       on a CSS unit some mobile browsers interpolate inconsistently.
+       Grouped under each service's existing category heading with a
+       small bullet marker per feature link — same links/routes as
+       always. The category matching the page you're currently on
+       (e.g. /web-development) gets a subtle highlight. */
+    header.site-header .has-mega .mega{
+      position:static !important;width:100% !important;max-width:100% !important;
+      box-shadow:none !important;border:0 !important;background:transparent !important;
+      padding:0 !important;margin:0 !important;overflow:hidden;
+      display:block !important;max-height:0;
+      transition:max-height .35s cubic-bezier(.4,0,.2,1);
+    }
+    header.site-header .mega-inner{
+      display:flex !important;flex-direction:column;gap:16px;
+      padding:10px 18px 18px 18px !important;background:var(--bg,#F5F4FB);
+    }
+    header.site-header .mega-col{padding:2px 0}
+    header.site-header .mega-col--active{
+      margin:0 -10px;padding:8px 10px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 14px rgba(30,34,51,.06);border-left:3px solid var(--violet,#6366F1);
+    }
+    header.site-header .mega-col h6{
+      margin:0 0 8px;font-size:.7rem;font-weight:700;letter-spacing:.07em;
+      text-transform:uppercase;color:var(--violet-dark,#4338CA);
+    }
+    header.site-header .mega-col ul{display:flex;flex-direction:column;gap:2px}
+    header.site-header .mega-col ul li a{
+      display:flex;align-items:center;gap:10px;padding:8px 8px;border-radius:8px;
+      font-size:.84rem;color:var(--ink-soft,#565B72);position:relative;
+      transition:background-color .15s ease,color .15s ease,padding-left .15s ease
+    }
+    header.site-header .mega-col ul li a::before{
+      content:'';flex:0 0 auto;width:5px;height:5px;border-radius:50%;
+      background:var(--violet,#6366F1);
+    }
+    header.site-header .mega-col ul li a:hover,
+    header.site-header .mega-col ul li a:focus-visible,
+    header.site-header .mega-col ul li a.active{
+      background:var(--violet-soft,#EEF0FF) !important;color:var(--violet-dark,#4338CA) !important;padding-left:11px;
+    }
+
+    /* Footer CTA card, pinned to the bottom of the scroll area with
+       the site's own gradient — purely decorative, not a menu item.
+       Width is set explicitly (not inherited from the generic
+       "#navLinks > li{width:100%}" rule) because 100% *plus* this
+       card's own left/right margins was pushing it past the sidebar's
+       right edge. Bottom safe-area is added on top of the normal
+       bottom margin so it never sits under a gesture bar/browser
+       toolbar. Height is intentionally not constrained — it grows
+       with its content, however many lines the heading wraps to. */
+    header.site-header #navLinks > li.nav-drawer-footer{
+      width:calc(100% - 28px) !important;
+    }
+    header.site-header .nav-drawer-footer{
+      display:block !important;box-sizing:border-box;
+      margin:auto 14px 0;
+      margin-bottom:max(16px,calc(16px + env(safe-area-inset-bottom,0px)));
+      padding:16px;border-radius:16px;flex:0 0 auto;
+      background:var(--grad-hero);color:#fff;
+      /* Reset the "white-space: nowrap" this card was silently
+         inheriting from the desktop pill header's ".nav-row" rule
+         (a proper ancestor of #navLinks in the DOM) — that inherited
+         nowrap, combined with an unnecessary overflow:hidden here,
+         was forcing the heading onto one unbreakable line and then
+         clipping whatever didn't fit. A gradient background already
+         clips to border-radius on its own, so overflow:hidden was
+         never actually needed for the rounded corners. */
+      white-space:normal;
+      overflow:visible;
+    }
+    header.site-header .nav-drawer-footer-title{
+      margin:0 0 6px;font-family:"Sora",sans-serif;
+      font-size:clamp(.82rem,3.4vw,.92rem);font-weight:700;
+      line-height:1.35;color:#fff;text-shadow:0 1px 3px rgba(30,20,60,.18);
+      white-space:normal;overflow-wrap:break-word;word-break:break-word;
+      max-width:100%;
+    }
+    header.site-header .nav-drawer-footer-tag{
+      margin:0;font-size:clamp(.68rem,2.6vw,.74rem);letter-spacing:.03em;
+      color:#fff;opacity:.96;text-shadow:0 1px 3px rgba(30,20,60,.15);
+      white-space:normal;overflow-wrap:break-word;max-width:100%;
+    }
+
+    .nav-backdrop{
+      display:block;position:fixed;inset:0;background:rgba(15,15,32,.46);z-index:1450;
+      opacity:0;pointer-events:none;transition:opacity .3s ease
+    }
+    .nav-backdrop.is-open{opacity:1;pointer-events:auto}
+  }
+
+  .bottom-nav{display:none}
+
+  @media (max-width:860px){
+    body{padding-bottom:calc(116px + env(safe-area-inset-bottom,0px))}
+
+    .bottom-nav{
+      --nav-gap:4px;
+      display:block;position:fixed;left:50%;right:auto;bottom:max(18px,calc(env(safe-area-inset-bottom,0px) + 10px));
+      width:min(286px,calc(100vw - 38px));z-index:1420;transform:translate(-50%,120%);
+      padding:0;pointer-events:none;animation:bottomNavSlideUp .55s cubic-bezier(.2,.8,.2,1) .12s forwards;
+    }
+    .bottom-nav-inner{
+      position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--nav-gap);
+      min-height:50px;padding:7px 8px;border-radius:999px;border:1px solid rgba(30,34,51,.08);
+      background:rgba(255,255,255,.96);box-shadow:0 12px 30px rgba(30,34,51,.18);
+      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);pointer-events:auto;overflow:visible;
+    }
+    .bottom-nav-indicator{display:none}
+    .bottom-nav a{
+      position:relative;z-index:1;isolation:isolate;display:flex;align-items:center;justify-content:center;min-width:0;
+      height:36px;border-radius:999px;color:#252a3b;-webkit-tap-highlight-color:transparent;
+      transition:color .24s ease,transform .24s cubic-bezier(.2,.8,.2,1),opacity .24s ease;
+    }
+    .bottom-nav a svg{position:relative;z-index:2;width:17px;height:17px;transition:transform .3s cubic-bezier(.2,1.35,.25,1),filter .24s ease}
+    .bottom-nav a.active{color:#fff;animation:bottomNavPop .42s cubic-bezier(.2,1.35,.25,1) both}
+.bottom-nav a.active::before{ 
+    content:''; 
+    position:absolute; 
+    left:50%; 
+    top:-11px; 
+    z-index:1; 
+    width:38px; 
+    height:38px; 
+    border-radius:50%; 
+    transform:translateX(-50%); 
+
+    background:#EE9E04; 
+
+    box-shadow: 
+        0 0 0 6px rgba(255,255,255,.9), 
+        0 10px 22px rgba(238,158,4,.34), 
+        0 3px 8px rgba(238,158,4,.18);
+
+    animation:bottomNavBubble .42s cubic-bezier(.2,1.35,.25,1) both; 
+}
+    .bottom-nav a.active::after{
+      content:'';position:absolute;left:50%;bottom:1px;z-index:1;width:22px;height:3px;border-radius:999px;
+      transform:translateX(-50%);background: #257072;opacity:.82;
+    }
+    .bottom-nav a.active svg{transform:translateY(-11px) scale(.92);filter:drop-shadow(0 4px 7px rgba(30,34,51,.2))}
+    .bottom-nav a:active svg{transform:translateY(-8px) scale(.86)}
+    .bottom-nav a:focus-visible{outline:2px solid #ff4f93;outline-offset:3px}
+
+    @keyframes bottomNavSlideUp{
+      from{opacity:0;transform:translate(-50%,120%) scale(.96)}
+      to{opacity:1;transform:translate(-50%,0) scale(1)}
+    }
+    @keyframes bottomNavPop{
+      0%{transform:translateY(0) scale(.9)}
+      58%{transform:translateY(-6px) scale(1.06)}
+      100%{transform:translateY(0) scale(1)}
+    }
+    @keyframes bottomNavBubble{
+      0%{transform:translateX(-50%) translateY(10px) scale(.76)}
+      58%{transform:translateX(-50%) translateY(-3px) scale(1.08)}
+      100%{transform:translateX(-50%) translateY(0) scale(1)}
+    }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .bottom-nav{animation:none !important;transform:translate(-50%,0)}
+    .bottom-nav a{animation:none !important}
+    .bottom-nav-indicator,.bottom-nav a,.bottom-nav a svg{transition:none !important}
+  }
+  .preloader,.page-exit-overlay{display:none !important}
+</style>
+</head>
+<body>
+<div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+<div class="nav-backdrop" id="navBackdrop"></div>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="https://elancier.com" class="brand">
+      <img src="https://elancier.com/storage/app/public/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp" alt="Elancier Solutions" class="brand-logo">
+    </a>
+    <ul class="nav-links" id="navLinks" aria-label="Primary">
+      <li class="nav-drawer-topbar" aria-hidden="true">
+        <a href="https://elancier.com" class="nav-drawer-brand" tabindex="-1">
+          <img src="https://elancier.com/storage/app/public/branding/IVj5EXJbBXXIcOiyHlr1Am3g.webp" alt="Elancier Solutions" class="nav-drawer-logo">
+        </a>
+        <button type="button" class="nav-links-close" id="navLinksClose" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </li>
+      <li>
+        <a href="https://elancier.com" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
+          <span class="nav-item-label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://elancier.com/about" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></span>
+          <span class="nav-item-label">About Us</span>
+        </a>
+      </li>
+      <li class="has-mega">
+        <a href="https://elancier.com/web-development" aria-haspopup="true" aria-expanded="false" aria-controls="servicesSubmenu" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></span>
+          <span class="nav-item-label">Services</span>
+          <span class="nav-item-chevron"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+        </a>
+        <div class="mega" id="servicesSubmenu">
+        <div class="mega-inner">
+                                  <div class="mega-col">
+              <h6>Web Development</h6>
+              <ul>
+                                  <li><a href="https://elancier.com/web-development#ecommerce">Ecommerce Solutions</a></li>
+                                  <li><a href="https://elancier.com/web-development#cms">CMS Solutions</a></li>
+                                  <li><a href="https://elancier.com/web-development#wordpress">WordPress Development</a></li>
+                                  <li><a href="https://elancier.com/web-development#maintenance">Website Maintenance</a></li>
+                              </ul>
+            </div>
+                                  <div class="mega-col">
+              <h6>Mobile App Development</h6>
+              <ul>
+                                  <li><a href="https://elancier.com/mobileapp-development#android">Android Development</a></li>
+                                  <li><a href="https://elancier.com/mobileapp-development#ios">iOS Development</a></li>
+                              </ul>
+            </div>
+                                  <div class="mega-col">
+              <h6>Creative Design</h6>
+              <ul>
+                                  <li><a href="https://elancier.com/creative-design#web-design">Web Designing</a></li>
+                                  <li><a href="https://elancier.com/creative-design#corporate-identity">Corporate Identity</a></li>
+                              </ul>
+            </div>
+                  </div>
+        </div>
+      </li>
+      <li>
+        <a href="https://elancier.com/portfolio" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+          <span class="nav-item-label">Portfolio</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://elancier.com/careers" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+          <span class="nav-item-label">Careers</span>
+
+        </a>
+      </li>
+      <li>
+        <a href="https://elancier.com/contact" class="">
+          <span class="nav-item-icon"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
+          <span class="nav-item-label">Contact Us</span>
+        </a>
+      </li>
+      <li class="nav-drawer-footer" aria-hidden="true">
+        <p class="nav-drawer-footer-title">Let&rsquo;s build something great together</p>
+        <p class="nav-drawer-footer-tag">Innovate &middot; Create &middot; Grow</p>
+      </li>
+    </ul>
+    <div class="nav-cta">
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+        <i class="fa-solid fa-ellipsis-vertical" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<section class="hero notfound-hero">
+  <div class="hero-aurora"><span></span><span></span><span></span></div>
+  <div class="container">
+    <div class="notfound-wrap reveal">
+      <div class="notfound-num" aria-hidden="true">
+        <span>4</span><span class="notfound-orb">0</span><span>4</span>
+      </div>
+      <div class="eyebrow on-dark" style="margin-top:8px"><span class="dot"></span>Page not found</div>      <h1 style="color:#fff;margin-bottom:14px">Looks like this page went missing</h1>
+      <p class="lead" style="margin:0 auto 34px">The page you&#039;re looking for may have been moved, renamed, or never existed. Let&#039;s get you back to somewhere useful.</p>
+      <div class="hero-actions" style="justify-content:center;margin-bottom:0">
+        <a href="https://elancier.com" class="btn btn-light">Back to home <span class="arrow">&rarr;</span></a>
+        <a href="https://elancier.com/contact" class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.55)">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="head-block center reveal" style="max-width:520px">
+      <div class="eyebrow"><span class="dot"></span>Where to next</div>      <h2>Popular pages</h2>
+    </div>
+    <div class="grid grid-4 reveal-stagger">
+      <a href="https://elancier.com/web-development" class="card tilt">
+        <div class="ic tone-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+</div>
+        <h4>Web Development</h4>
+        <p>Ecommerce, CMS &amp; WordPress builds.</p>
+      </a>
+      <a href="https://elancier.com/mobileapp-development" class="card tilt">
+        <div class="ic tone-coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+</div>
+        <h4>Mobile Apps</h4>
+        <p>Native Android and iOS apps.</p>
+      </a>
+      <a href="https://elancier.com/portfolio" class="card tilt">
+        <div class="ic tone-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0 0 20 2 2 0 0 0 0-4 2 2 0 0 1 0-4h3a3 3 0 0 0 3-3c0-5-3-9-6-9z"/><circle cx="7" cy="10" r="1"/><circle cx="7" cy="14" r="1"/><circle cx="11" cy="7" r="1"/><circle cx="16" cy="8" r="1"/></svg>
+</div>
+        <h4>Portfolio</h4>
+        <p>See what we've built for clients.</p>
+      </a>
+      <a href="https://elancier.com/contact" class="card tilt">
+        <div class="ic tone-amber">&#128172;</div>
+        <h4>Contact Us</h4>
+        <p>Get in touch about your project.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="https://elancier.com" class="brand"><img src="https://elancier.com/storage/app/public/branding/Bhg1YcbcxLatLhop5c6snLsL.webp" alt="Elancier Solutions" class="brand-logo brand-logo-white" loading="lazy"></a>
+        <p class="desc">A Madurai-based web &amp; mobile app development studio building fast, good-looking products since 2013.</p>
+        <div class="footer-social">
+                           <a href="https://instagram.com/elanciersolution" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>         <a href="https://in.linkedin.com/company/elanciersolutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>        </div>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="https://elancier.com/about">About Us</a></li>
+          <li><a href="https://elancier.com/portfolio">Portfolio</a></li>
+          <li><a href="https://elancier.com/careers">Careers</a></li>
+          <li><a href="https://elancier.com/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="https://elancier.com/web-development">Web Development</a></li>
+          <li><a href="https://elancier.com/mobileapp-development">Mobile Apps</a></li>
+          <li><a href="https://elancier.com/creative-design">Creative Design</a></li>
+          <!-- <li><a href="https://elancier.com/online-marketing">Online Marketing</a></li> -->
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="tel:+918144688721">+91 81446 88721</a></li>          <li><a href="mailto:admin@elancier.com">admin@elancier.com</a></li>                      <li><a href="https://maps.google.com/?q=94-19%2C+2nd+floor%2C+Mani+Kothanar+street%2C+Bypass+Rd%2C+Sathyamoorthy+Nagar%2C+Madurai%2C+Tamil+Nadu+625016" target="_blank" rel="noopener">94-19, 2nd floor, Mani Kothanar street, Bypass Rd, Sathyamoorthy Nagar, Madurai, Tamil Nadu 625016</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright &copy; 2026 Elancier Solutions. All rights reserved.</span>
+      <span>Designed &amp; built with care in Madurai.</span>
+    </div>
+  </div>
+</footer>
+<nav class="bottom-nav" aria-label="Mobile quick navigation">
+  <div class="bottom-nav-inner">
+    <span class="bottom-nav-indicator" aria-hidden="true"></span>
+    <a href="https://elancier.com" aria-label="Home" class="">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+    </a>
+    <a href="https://elancier.com/about" aria-label="About Us" class="">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+    </a>
+    <a href="https://elancier.com/portfolio" aria-label="Portfolio" class="">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+    </a>
+    <a href="https://elancier.com/careers" aria-label="Careers" class="">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><path d="M2.5 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.3"/><path d="M15.3 13.3c2.3.4 4.2 2.4 4.2 4.7"/></svg>
+    </a>
+    <a href="https://elancier.com/contact" aria-label="Contact Us" class="">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M3 6l9 7 9-7"/></svg>
+    </a>
+  </div>
+</nav>
+<div class="assistant-widget assistant-widget--frontend" id="assistantWidget" data-context="frontend">
+  <button type="button" class="assistant-toggle" id="assistantToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="assistantPanel" aria-label="Open website assistant">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="24" y1="4" x2="24" y2="10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="24" cy="3.5" r="2.6" fill="#2DD4BF"/>
+      <rect x="5" y="18" width="5" height="10" rx="2.5" fill="#fff"/>
+      <rect x="38" y="18" width="5" height="10" rx="2.5" fill="#fff"/>
+      <rect x="9" y="10" width="30" height="25" rx="11" fill="#fff"/>
+      <circle cx="18.5" cy="22" r="3.1" fill="#4338CA"/>
+      <circle cx="29.5" cy="22" r="3.1" fill="#4338CA"/>
+      <path d="M18 27.5c1.6 1.7 4.1 2.6 6 2.6s4.4-.9 6-2.6" stroke="#4338CA" stroke-width="2.3" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="assistant-toggle-badge" aria-hidden="true"></span>
+  </button>
+
+  <div class="assistant-panel" id="assistantPanel" role="dialog" aria-modal="false" aria-labelledby="assistantTitle" hidden>
+    <div class="assistant-header">
+      <div class="assistant-header-info">
+        <span class="assistant-avatar" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="24" y1="4" x2="24" y2="10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="3.5" r="2.6" fill="#2DD4BF"/>
+            <rect x="5" y="18" width="5" height="10" rx="2.5" fill="#fff"/>
+            <rect x="38" y="18" width="5" height="10" rx="2.5" fill="#fff"/>
+            <rect x="9" y="10" width="30" height="25" rx="11" fill="#fff"/>
+            <circle cx="18.5" cy="22" r="3.1" fill="#4338CA"/>
+            <circle cx="29.5" cy="22" r="3.1" fill="#4338CA"/>
+            <path d="M18 27.5c1.6 1.7 4.1 2.6 6 2.6s4.4-.9 6-2.6" stroke="#4338CA" stroke-width="2.3" stroke-linecap="round" fill="none"/>
+          </svg>
+        </span>
+        <div>
+          <div class="assistant-title" id="assistantTitle">Elancier Assistant</div>
+          <div class="assistant-subtitle">FAQ-style assistant — not a live chat</div>
+        </div>
+      </div>
+      <div class="assistant-header-actions">
+        <button type="button" class="assistant-minimize" id="assistantMinimize" aria-label="Minimize assistant">&#8211;</button>
+        <button type="button" class="assistant-close" id="assistantClose" aria-label="Close assistant">&times;</button>
+      </div>
+    </div>
+
+    <div class="assistant-body" id="assistantBody">
+      <div class="assistant-message assistant-message--bot">
+        <p>Hi! I&#039;m a quick FAQ assistant for Elancier Solutions. Pick a question below, or type your own.</p>
+      </div>
+              <div class="assistant-suggestions" id="assistantSuggestions">
+                      <button type="button" class="assistant-suggestion" data-question="What services do you provide?">What services do you provide?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Do you develop websites?">Do you develop websites?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Do you develop Android and iOS applications?">Do you develop Android and iOS applications?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Do you provide ecommerce development?">Do you provide ecommerce development?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Can I view your portfolio?">Can I view your portfolio?</button>
+                      <button type="button" class="assistant-suggestion" data-question="How can I request a quotation?">How can I request a quotation?</button>
+                      <button type="button" class="assistant-suggestion" data-question="How can I contact Elancier Solutions?">How can I contact Elancier Solutions?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Where is your office located?">Where is your office located?</button>
+                      <button type="button" class="assistant-suggestion" data-question="What are your working hours?">What are your working hours?</button>
+                      <button type="button" class="assistant-suggestion" data-question="Do you provide maintenance and support?">Do you provide maintenance and support?</button>
+                  </div>
+          </div>
+
+    <form class="assistant-input-row" id="assistantForm">
+      <label for="assistantInput" class="sr-only">Type your question</label>
+      <input type="text" id="assistantInput" class="assistant-input" placeholder="Type a question…" maxlength="200" autocomplete="off">
+      <button type="submit" class="assistant-send" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  .assistant-widget{position:fixed;z-index:1400;font-family:inherit}
+  /* Bottom-right per spec, but offset well clear of the right-edge
+     Quick Contact tab (which hugs the very edge) rather than sitting
+     flush against it, and low enough to sit under where that tab
+     typically runs (its mid-page vertical band) rather than beside it. */
+  .assistant-widget--frontend{right:92px;bottom:24px}
+  .assistant-widget--admin{right:24px;bottom:24px}
+
+  .assistant-toggle{
+    position:relative;width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;
+    background:linear-gradient(135deg,var(--violet,#6366F1),var(--violet-dark,#4338CA));
+    color:#fff;box-shadow:0 10px 28px rgba(67,56,202,.35);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .2s ease,box-shadow .2s ease;padding:0
+  }
+  .assistant-toggle:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 14px 32px rgba(67,56,202,.42)}
+  .assistant-toggle svg{width:32px;height:32px}
+  .assistant-toggle-badge{position:absolute;top:2px;right:2px;width:11px;height:11px;border-radius:50%;background:var(--teal,#2DD4BF);border:2px solid #fff}
+  .assistant-widget.is-open .assistant-toggle{transform:scale(.94)}
+
+  .assistant-panel{
+    position:absolute;bottom:68px;right:0;width:min(360px,calc(100vw - 32px));
+    max-height:min(560px,calc(100vh - 140px));
+    background:#fff;border-radius:18px;overflow:hidden;
+    box-shadow:0 24px 60px rgba(20,20,40,.28);border:1px solid var(--line,#E7E7F3);
+    display:flex;flex-direction:column;
+    opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;
+    transition:opacity .2s ease,transform .2s ease
+  }
+  .assistant-widget.is-open .assistant-panel{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+
+  .assistant-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;background:linear-gradient(135deg,var(--violet,#6366F1),var(--violet-dark,#4338CA));color:#fff;flex:0 0 auto}
+  .assistant-header-info{display:flex;align-items:center;gap:10px;min-width:0}
+  .assistant-avatar{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center}
+  .assistant-avatar svg{width:24px;height:24px}
+  .assistant-title{font-weight:700;font-size:.92rem;line-height:1.2}
+  .assistant-subtitle{font-size:.72rem;opacity:.85;line-height:1.2;margin-top:1px}
+  .assistant-header-actions{display:flex;align-items:center;gap:4px;flex:0 0 auto}
+  .assistant-minimize,.assistant-close{width:28px;height:28px;border-radius:8px;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.05rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  .assistant-minimize:hover,.assistant-close:hover{background:rgba(255,255,255,.26)}
+
+  .assistant-body{flex:1 1 auto;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--panel,#F7F7FB)}
+  .assistant-message{max-width:88%;padding:10px 13px;border-radius:14px;font-size:.86rem;line-height:1.5;word-break:break-word}
+  .assistant-message p{margin:0 0 4px}
+  .assistant-message p:last-child{margin-bottom:0}
+  .assistant-message--bot{align-self:flex-start;background:#fff;border:1px solid var(--line,#E7E7F3);color:var(--ink,#1E2233);border-bottom-left-radius:4px}
+  .assistant-message--user{align-self:flex-end;background:var(--violet,#6366F1);color:#fff;border-bottom-right-radius:4px}
+  .assistant-message-link{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-weight:600;font-size:.82rem;color:var(--violet-dark,#4338CA);text-decoration:none}
+  .assistant-message-link:hover{text-decoration:underline}
+  .assistant-contact-card{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line,#E7E7F3);font-size:.82rem;display:flex;flex-direction:column;gap:3px}
+  .assistant-contact-card a{color:var(--violet-dark,#4338CA);text-decoration:none;word-break:break-word}
+  .assistant-contact-card a:hover{text-decoration:underline}
+
+  .assistant-suggestions{display:flex;flex-direction:column;gap:8px;margin-top:2px}
+  .assistant-suggestion{
+    text-align:left;background:#fff;border:1px solid var(--line,#E7E7F3);color:var(--ink,#1E2233);
+    border-radius:10px;padding:9px 12px;font-size:.82rem;cursor:pointer;transition:border-color .15s ease,background-color .15s ease
+  }
+  .assistant-suggestion:hover{border-color:var(--violet,#6366F1);background:var(--violet-soft,#EEF0FF)}
+
+  .assistant-input-row{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:12px;border-top:1px solid var(--line,#E7E7F3);background:#fff}
+  .assistant-input{flex:1 1 auto;min-width:0;border:1px solid var(--line,#E7E7F3);border-radius:10px;padding:10px 12px;font-size:.86rem;font-family:inherit}
+  .assistant-input:focus{outline:none;border-color:var(--violet,#6366F1)}
+  .assistant-send{flex:0 0 auto;width:38px;height:38px;border-radius:10px;border:0;background:var(--violet,#6366F1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .assistant-send:hover{background:var(--violet-dark,#4338CA)}
+  .assistant-send svg{width:18px;height:18px}
+
+  @media (max-width:600px){
+    .assistant-widget--frontend{right:14px;bottom:calc(64px + env(safe-area-inset-bottom, 0px) + 12px)}
+    .assistant-widget--admin{right:14px;bottom:14px}
+    .assistant-toggle{width:50px;height:50px}
+    .assistant-toggle svg{width:28px;height:28px}
+    .assistant-panel{position:fixed;left:14px;right:14px;top:auto;width:auto;max-height:min(70vh,500px)}
+    .assistant-widget--frontend .assistant-panel{bottom:calc(64px + env(safe-area-inset-bottom, 0px) + 12px)}
+    .assistant-widget--admin .assistant-panel{bottom:14px}
+  }
+</style>
+
+<script>
+(function () {
+  var askUrl = "https:\/\/elancier.com\/assistant\/ask";
+  var csrfToken = document.querySelector('meta[name="csrf-token"]');
+  csrfToken = csrfToken ? csrfToken.getAttribute('content') : '';
+  var contact = {
+    phone: "+91 81446 88721",
+    email: "admin@elancier.com",
+    whatsappLink: "https:\/\/wa.me\/918144688721?text=Hello%2C%20I%20would%20like%20to%20know%20more.",
+    contactUrl: "https:\/\/elancier.com\/contact"  };
+  var networkErrorMessage = 'Sorry, something went wrong sending that. Please try again in a moment.';
+
+  var root = document.getElementById('assistantWidget');
+  var toggle = document.getElementById('assistantToggle');
+  var panel = document.getElementById('assistantPanel');
+  var closeBtn = document.getElementById('assistantClose');
+  var minimizeBtn = document.getElementById('assistantMinimize');
+  var body = document.getElementById('assistantBody');
+  var form = document.getElementById('assistantForm');
+  var input = document.getElementById('assistantInput');
+  var sendBtn = form ? form.querySelector('.assistant-send') : null;
+  if (!root || !toggle || !panel || !form || !input) return;
+
+  function open() {
+    root.classList.add('is-open');
+    panel.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    setTimeout(function () { input.focus(); }, 150);
+  }
+  function close() {
+    root.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    setTimeout(function () { if (!root.classList.contains('is-open')) panel.hidden = true; }, 200);
+  }
+  toggle.addEventListener('click', function () {
+    root.classList.contains('is-open') ? close() : open();
+  });
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (minimizeBtn) minimizeBtn.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && root.classList.contains('is-open')) close();
+  });
+  document.addEventListener('click', function (e) {
+    if (root.classList.contains('is-open') && !root.contains(e.target)) close();
+  });
+
+  function scrollToBottom() {
+    body.scrollTop = body.scrollHeight;
+  }
+
+  // All text content is inserted via textContent (never innerHTML),
+  // and link hrefs are assigned as element properties — this can't
+  // be used to inject markup, whether the text came from a visitor's
+  // typed question or from the server's response text. Multi-line
+  // answers (e.g. a list of job openings) render as separate <p>
+  // lines rather than raw newlines inside one text node.
+  function addMessage(text, sender, linkLabel, linkUrl) {
+    var msg = document.createElement('div');
+    msg.className = 'assistant-message assistant-message--' + sender;
+    (text || '').split('\n').forEach(function (line) {
+      var p = document.createElement('p');
+      p.textContent = line;
+      msg.appendChild(p);
+    });
+    if (linkLabel && linkUrl) {
+      var a = document.createElement('a');
+      a.className = 'assistant-message-link';
+      a.href = linkUrl;
+      a.textContent = linkLabel + ' →';
+      msg.appendChild(a);
+    }
+    body.appendChild(msg);
+    scrollToBottom();
+    return msg;
+  }
+
+  function addContactCard(msg) {
+    var card = document.createElement('div');
+    card.className = 'assistant-contact-card';
+
+    function addLine(label, value, href) {
+      if (!value) return;
+      var line = document.createElement('div');
+      if (href) {
+        var a = document.createElement('a');
+        a.href = href;
+        if (href.indexOf('http') === 0) a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = value;
+        line.appendChild(document.createTextNode(label + ': '));
+        line.appendChild(a);
+      } else {
+        line.textContent = label + ': ' + value;
+      }
+      card.appendChild(line);
+    }
+
+    addLine('Phone', contact.phone, contact.phone ? 'tel:' + contact.phone.replace(/[^\d+]/g, '') : null);
+    addLine('Email', contact.email, contact.email ? 'mailto:' + contact.email : null);
+    addLine('WhatsApp', contact.whatsappLink ? 'Chat with us' : null, contact.whatsappLink);
+    var contactLine = document.createElement('div');
+    var contactA = document.createElement('a');
+    contactA.href = contact.contactUrl;
+    contactA.textContent = 'Visit our Contact Us page →';
+    contactLine.appendChild(contactA);
+    card.appendChild(contactLine);
+
+    msg.appendChild(card);
+    scrollToBottom();
+  }
+
+  var busy = false;
+
+  function setBusy(state) {
+    busy = state;
+    input.disabled = state;
+    if (sendBtn) sendBtn.disabled = state;
+  }
+
+  // Every question — predefined or typed — goes through the same
+  // server request, which validates, rate-limits, moderates, matches
+  // against live careers/FAQ data, and logs it before replying. The
+  // client only renders whatever comes back.
+  function askServer(question) {
+    if (busy) return; // guards against duplicate/rapid submissions client-side too
+    addMessage(question, 'user');
+    setBusy(true);
+
+    fetch(askUrl, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-TOKEN': csrfToken
+      },
+      body: JSON.stringify({ question: question, page_url: window.location.href })
+    }).then(function (response) {
+      return response.json().catch(function () { return {}; }).then(function (data) {
+        return { status: response.status, data: data };
+      });
+    }).then(function (result) {
+      if (result.status >= 200 && result.status < 300 && result.data && result.data.answer) {
+        var msg = addMessage(result.data.answer, 'bot', result.data.linkLabel, result.data.linkUrl);
+        if (result.data.status !== 'answered') addContactCard(msg);
+      } else {
+        addMessage(networkErrorMessage, 'bot');
+      }
+    }).catch(function () {
+      addMessage(networkErrorMessage, 'bot');
+    }).finally(function () {
+      setBusy(false);
+    });
+  }
+
+  var suggestionsWrap = document.getElementById('assistantSuggestions');
+  if (suggestionsWrap) {
+    suggestionsWrap.addEventListener('click', function (e) {
+      var btn = e.target.closest('.assistant-suggestion');
+      if (!btn) return;
+      askServer(btn.dataset.question);
+    });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var value = input.value.trim();
+    if (!value || busy) return;
+    askServer(value);
+    input.value = '';
+  });
+}());
+</script>
+
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+<script>
+window.ELANCIER_ASSET_BASE = "https://elancier.com/assets/frontend";
+window.ELANCIER_CONTACT_URL = "https://elancier.com/contact";
+window.ELANCIER_SETTINGS = {
+  phone: "+91 81446 88721",
+  email: "admin@elancier.com",
+  whatsappLink: "https:\/\/wa.me\/918144688721?text=Hello%2C%20I%20would%20like%20to%20know%20more."};
+
+// --- Mobile nav / Services mega-menu ---------------------------------
+// Self-contained: uses its own "is-open" class throughout (see the
+// CSS above), so it works correctly whatever else main.js does with
+// this markup — this only adds a mobile presentation layer on top,
+// it doesn't disable or depend on anything else.
+(function () {
+  var MOBILE_BREAKPOINT = 860;
+  var toggle = document.getElementById('navToggle') || document.querySelector('.nav-cta .nav-toggle');
+  var navLinks = document.getElementById('navLinks');
+  var closeBtn = document.getElementById('navLinksClose');
+  var backdrop = document.getElementById('navBackdrop');
+  var megaItem = document.querySelector('.has-mega');
+  var megaTrigger = megaItem ? megaItem.querySelector('a[aria-haspopup]') : null;
+  var megaPanel = megaItem ? megaItem.querySelector('.mega') : null;
+  if (!toggle || !navLinks) return;
+  if (toggle.dataset.navInit === '1') return; // guard against this script somehow running twice
+  toggle.dataset.navInit = '1';
+
+  var scrollLockY = 0;
+
+  function isMobile() {
+    return window.innerWidth <= MOBILE_BREAKPOINT;
+  }
+
+  function setMegaOpen(open) {
+    if (!megaItem) return;
+    megaItem.classList.toggle('is-open', open);
+    if (megaTrigger) megaTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (megaPanel) {
+      if (open) {
+        // Measured from the panel's real content height (scrollHeight)
+        // rather than a fixed guess, so however many categories/links
+        // a service has, the submenu always expands to fit all of
+        // them — nothing is ever clipped — and still animates smoothly.
+        megaPanel.style.maxHeight = megaPanel.scrollHeight + 'px';
+      } else {
+        megaPanel.style.maxHeight = '0px';
+      }
+    }
+  }
+
+  // The Services trigger stays a real link on desktop (unchanged
+  // click-to-visit-the-page + hover-to-preview behaviour), but on
+  // mobile it must only ever expand/collapse its submenu — never
+  // navigate. Removing the href outright (rather than only relying
+  // on a click handler's preventDefault) also stops mobile-only
+  // affordances a plain click handler can't catch, such as a
+  // long-press "Open in new tab" / "Copy link" context menu or a
+  // screen reader announcing it as a page link. The href is restored
+  // the moment the viewport is wide enough to be desktop again.
+  function syncMegaTriggerMode() {
+    if (!megaTrigger) return;
+    if (isMobile()) {
+      if (megaTrigger.hasAttribute('href')) {
+        megaTrigger.dataset.href = megaTrigger.getAttribute('href');
+        megaTrigger.removeAttribute('href');
+      }
+      megaTrigger.setAttribute('role', 'button');
+      megaTrigger.setAttribute('tabindex', '0');
+    } else if (megaTrigger.dataset.href) {
+      megaTrigger.setAttribute('href', megaTrigger.dataset.href);
+      megaTrigger.removeAttribute('role');
+      megaTrigger.removeAttribute('tabindex');
+    }
+  }
+
+  function focusableItems() {
+    return Array.prototype.slice.call(
+      navLinks.querySelectorAll('a[href], button:not([disabled]), [role="button"]')
+    ).filter(function (el) { return el.offsetParent !== null; });
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    var items = focusableItems();
+    if (!items.length) return;
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  function setNavOpen(open) {
+    navLinks.classList.toggle('is-open', open);
+    navLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (backdrop) backdrop.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+
+    if (open) {
+      scrollLockY = window.scrollY || window.pageYOffset || 0;
+      document.body.style.top = '-' + scrollLockY + 'px';
+      document.body.classList.add('mobile-nav-open');
+      document.addEventListener('keydown', trapFocus);
+      var items = focusableItems();
+      if (items.length) items[0].focus();
+    } else {
+      setMegaOpen(false);
+      document.body.classList.remove('mobile-nav-open');
+      document.body.style.top = '';
+      window.scrollTo(0, scrollLockY);
+      document.removeEventListener('keydown', trapFocus);
+      toggle.focus();
+    }
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    setNavOpen(!navLinks.classList.contains('is-open'));
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () { setNavOpen(false); });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', function () { setNavOpen(false); });
+  }
+
+  if (megaTrigger) {
+    megaTrigger.addEventListener('click', function (e) {
+      if (!isMobile()) return; // desktop keeps its existing hover/click behaviour untouched
+      e.preventDefault();
+      setMegaOpen(!megaItem.classList.contains('is-open'));
+    });
+    // With the href removed on mobile the trigger is a role="button"
+    // element, so it needs its own Enter/Space handling to stay
+    // keyboard-operable the same way a native button would be.
+    megaTrigger.addEventListener('keydown', function (e) {
+      if (!isMobile()) return;
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        setMegaOpen(!megaItem.classList.contains('is-open'));
+      }
+    });
+  }
+
+  syncMegaTriggerMode();
+  // Landing directly on a service page (e.g. /web-development): the
+  // Services link already renders with the "active" class server-side
+  // (see header.blade.php) — on mobile, also pre-expand its submenu
+  // so the relevant category is visible without an extra tap.
+  if (isMobile() && megaTrigger && megaTrigger.classList.contains('active')) {
+    setMegaOpen(true);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('is-open')) setNavOpen(false);
+  });
+
+  window.addEventListener('resize', function () {
+    if (!isMobile() && navLinks.classList.contains('is-open')) setNavOpen(false);
+    syncMegaTriggerMode();
+    if (megaPanel && megaItem.classList.contains('is-open')) {
+      megaPanel.style.maxHeight = megaPanel.scrollHeight + 'px';
+    }
+  });
+
+  // Close the mobile menu after tapping any real navigation link
+  // inside it (but not the Services disclosure trigger itself).
+  navLinks.addEventListener('click', function (e) {
+    var link = e.target.closest('a');
+    if (link && link !== megaTrigger) setNavOpen(false);
+  });
+
+  // Back/forward navigation can restore the page from the browser's
+  // bfcache with whatever DOM/inline-style state it had right before
+  // navigating away — if the drawer was open, that includes the
+  // scroll-lock styles. Force everything back to closed/unlocked
+  // whenever the page is shown this way.
+  window.addEventListener('pageshow', function (e) {
+    if (e.persisted) {
+      document.body.classList.remove('mobile-nav-open');
+      document.body.style.top = '';
+      navLinks.classList.remove('is-open');
+      if (backdrop) backdrop.classList.remove('is-open');
+      setMegaOpen(false);
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+  });
+}());
+
+// --- Toast notifications --------------------------------------------
+// Small reusable helper so every AJAX form on the site (contact,
+// quick contact, career application) shows the same success/error
+// notification, auto-dismissed after a few seconds.
+window.ElancierToast = (function () {
+  var container = document.getElementById('toast-container');
+  function show(message, type, duration) {
+    if (!container || !message) return;
+    type = type === 'error' ? 'error' : 'success';
+    duration = duration || 5000;
+    var toast = document.createElement('div');
+    toast.className = 'toast toast-' + type;
+    toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
+    var icon = document.createElement('span');
+    icon.className = 'toast-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = type === 'error' ? '!' : '\u2713';
+    var body = document.createElement('span');
+    body.className = 'toast-body';
+    body.textContent = message;
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'toast-close';
+    close.setAttribute('aria-label', 'Dismiss notification');
+    close.innerHTML = '&times;';
+    toast.appendChild(icon);
+    toast.appendChild(body);
+    toast.appendChild(close);
+    container.appendChild(toast);
+    requestAnimationFrame(function () { toast.classList.add('is-visible'); });
+    var dismissed = false;
+    var timer = setTimeout(dismiss, duration);
+    function dismiss() {
+      if (dismissed) return;
+      dismissed = true;
+      clearTimeout(timer);
+      toast.classList.remove('is-visible');
+      setTimeout(function () { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
+    }
+    close.addEventListener('click', dismiss);
+  }
+  return { show: show };
+}());
+
+// --- AJAX form submission (contact / quick contact / career apply) --
+// One shared handler: saves the form via fetch, shows a toast, resets
+// the form with no navigation/flicker, blocks duplicate submits while
+// a request is in flight, and — on a 422 — fills in field errors
+// without touching (or clearing) what the visitor already typed.
+window.ElancierAjaxForms = (function () {
+  function clearErrors(form) {
+    form.querySelectorAll('[data-error-for]').forEach(function (el) { el.textContent = ''; });
+    form.querySelectorAll('.field-invalid').forEach(function (el) { el.classList.remove('field-invalid'); });
+  }
+  function showErrors(form, errors) {
+    Object.keys(errors || {}).forEach(function (field) {
+      var message = Array.isArray(errors[field]) ? errors[field][0] : errors[field];
+      var input = form.querySelector('[name="' + field + '"]');
+      var errorEl = form.querySelector('[data-error-for="' + field + '"]');
+      if (input && input.closest('.field')) input.closest('.field').classList.add('field-invalid');
+      if (errorEl) errorEl.textContent = message;
+    });
+  }
+  function submit(form) {
+    if (form.dataset.submitting === '1') return;
+    form.dataset.submitting = '1';
+    clearErrors(form);
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var originalLabel = submitBtn ? submitBtn.innerHTML : '';
+    var busyLabel = (submitBtn && submitBtn.dataset.busyLabel) || 'Sending...';
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = busyLabel; }
+
+    fetch(form.getAttribute('action'), {
+      method: 'POST',
+      body: new FormData(form),
+      credentials: 'same-origin',
+      headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+    }).then(function (response) {
+      return response.json().catch(function () { return {}; }).then(function (data) {
+        return { status: response.status, data: data };
+      });
+    }).then(function (result) {
+      if (result.status >= 200 && result.status < 300) {
+        window.ElancierToast.show(result.data.message || 'Thanks — your submission has been received.', 'success');
+        form.reset();
+        clearErrors(form);
+        form.dispatchEvent(new CustomEvent('elancier:ajax-success', { detail: result.data }));
+      } else if (result.status === 422 && result.data && result.data.errors) {
+        showErrors(form, result.data.errors);
+        window.ElancierToast.show(result.data.message || 'Please check the highlighted fields and try again.', 'error');
+      } else {
+        window.ElancierToast.show('Something went wrong. Please try again.', 'error');
+      }
+    }).catch(function () {
+      window.ElancierToast.show('Network error — please check your connection and try again.', 'error');
+    }).finally(function () {
+      form.dataset.submitting = '0';
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalLabel; }
+    });
+  }
+  return { submit: submit };
+}());
+
+(function () {
+  // Delegated at the document level (capture phase) so this covers
+  // every contact-family form on every page — the main Contact form
+  // and the Quick Contact widget alike — the moment either is
+  // submitted, without needing to know where in the DOM it lives.
+  // Running in the capture phase and stopping propagation means it
+  // takes over before any other submit handler (e.g. one that shows
+  // the old in-panel success message) can run.
+  //
+  // Matched by URL *path* rather than exact string equality: a form's
+  // `action` property is always the fully-resolved absolute URL,
+  // which previously had to match window.ELANCIER_CONTACT_URL
+  // character-for-character — silently failing to recognise a
+  // contact-family form (leaving its old built-in success behaviour
+  // to run untouched) if the scheme/host differed for any reason
+  // (e.g. APP_URL not exactly matching the live domain) or a
+  // trailing slash was present. Comparing just the path avoids all
+  // of that.
+  function normalizedPath(url) {
+    try {
+      return new URL(url, window.location.href).pathname.replace(/\/+$/, '');
+    } catch (e) {
+      return null;
+    }
+  }
+  var contactPath = normalizedPath(window.ELANCIER_CONTACT_URL);
+
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!(form instanceof HTMLFormElement)) return;
+    var isAjaxForm = form.hasAttribute('data-ajax-form')
+      || (contactPath !== null && normalizedPath(form.action) === contactPath);
+    if (!isAjaxForm) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    window.ElancierAjaxForms.submit(form);
+  }, true);
+}());
+</script>
+<script src="https://elancier.com/public/assets/frontend/js/main.js"></script>
+</body>
+</html>

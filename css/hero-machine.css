@@ -1,0 +1,63 @@
+/* Hero marble-run stage — sits in the existing .hero-visual column */
+
+.hero-visual{
+  position:relative;
+  height:min(540px, 62vw);
+  min-height:380px;
+  perspective:none;
+}
+
+.hero-machine{
+  position:absolute;
+  inset:0;
+  border-radius:28px;
+  overflow:hidden;
+  background:
+    radial-gradient(120% 100% at 72% 42%, #ffffff 0%, #F7F6FD 46%, #EEEEFE 100%);
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:
+    0 36px 80px rgba(18,12,34,.32),
+    0 0 0 1px rgba(99,102,241,.08);
+}
+
+.hero-machine canvas{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+}
+
+.hero-machine-fallback{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink-soft);
+  font-family:"Sora",sans-serif;
+  font-size:.9rem;
+  padding:24px;
+  text-align:center;
+}
+
+.hero-machine.is-fallback .hero-machine-fallback{ display:flex; }
+
+@media (max-width:960px){
+  .hero-visual{
+    height:min(420px, 78vw);
+    min-height:300px;
+    margin-top:8px;
+  }
+}
+
+@media (max-width:700px){
+  .hero-visual{
+    height:300px;
+    min-height:260px;
+  }
+  .hero-machine{ border-radius:22px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-machine{ box-shadow:0 20px 48px rgba(18,12,34,.22); }
+}
