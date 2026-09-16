@@ -103,150 +103,47 @@ a.btn.btn-light {
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="hero-machine is-web" id="heroMachine">
-        <svg viewBox="0 0 760 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Elancier product studio animation">
-          <defs>
-            <linearGradient id="tube" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="45%" stop-color="#E8ECFA"/>
-              <stop offset="100%" stop-color="#C9D0F2"/>
-            </linearGradient>
-            <linearGradient id="plastic" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#FFFFFF"/>
-              <stop offset="100%" stop-color="#E6E8F6"/>
-            </linearGradient>
-            <linearGradient id="plasticSide" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#D9DDF0"/>
-              <stop offset="100%" stop-color="#C5CAE4"/>
-            </linearGradient>
-            <linearGradient id="violetG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#818CF8"/>
-              <stop offset="100%" stop-color="#4338CA"/>
-            </linearGradient>
-            <linearGradient id="coralG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#FDA4AF"/>
-              <stop offset="100%" stop-color="#FB7185"/>
-            </linearGradient>
-            <linearGradient id="tealG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#5EEAD4"/>
-              <stop offset="100%" stop-color="#14B8A6"/>
-            </linearGradient>
-            <linearGradient id="amberG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#FCD34D"/>
-              <stop offset="100%" stop-color="#F5A623"/>
-            </linearGradient>
-            <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#6B7288"/>
-              <stop offset="100%" stop-color="#2A2F42"/>
-            </linearGradient>
-            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#4338CA" flood-opacity=".10"/>
-            </filter>
-            <filter id="ball">
-              <feDropShadow dx="1" dy="3" stdDeviation="2.2" flood-color="#1E2233" flood-opacity=".22"/>
-            </filter>
-          </defs>
-
-          <g transform="translate(-70,28) scale(1.08)">
-          <g class="machine-float">
-            <!-- ground shadow -->
-            <ellipse cx="430" cy="470" rx="250" ry="28" fill="#D8DCF0" opacity=".45"/>
-
-            <!-- glass loop -->
-            <ellipse cx="430" cy="248" rx="248" ry="132" fill="none" stroke="url(#tube)" stroke-width="26" opacity=".95" filter="url(#soft)"/>
-            <ellipse cx="430" cy="248" rx="248" ry="132" fill="none" stroke="#ffffff" stroke-width="8" opacity=".55"/>
-            <ellipse class="arch-glow" cx="430" cy="248" rx="248" ry="132" fill="none" stroke="#6366F1" stroke-width="2" opacity=".35"/>
-
-            <!-- loop supports -->
-            <path d="M196 268 C196 210 236 176 258 176 C250 206 248 236 254 268 Z" fill="url(#plastic)" opacity=".95"/>
-            <path d="M592 286 C604 228 640 202 668 210 C650 236 644 260 650 292 Z" fill="url(#plastic)" opacity=".95"/>
-            <path d="M390 168 C400 128 428 110 452 116 C444 140 442 156 448 176 Z" fill="url(#plastic)" opacity=".9"/>
-
-            <!-- maze floor + walls (E-shaped channels) -->
-            <g transform="translate(332,176) rotate(-18 90 78)">
-              <g class="orb-maze-wrap">
-              <rect x="8" y="8" width="176" height="148" rx="18" fill="url(#plastic)" filter="url(#soft)"/>
-              <rect x="20" y="18" width="18" height="128" rx="8" fill="url(#plasticSide)"/>
-              <rect x="20" y="18" width="150" height="18" rx="8" fill="url(#plasticSide)"/>
-              <rect x="20" y="72" width="118" height="18" rx="8" fill="url(#plasticSide)"/>
-              <rect x="20" y="128" width="150" height="18" rx="8" fill="url(#plasticSide)"/>
-              <rect x="152" y="18" width="18" height="52" rx="8" fill="url(#plasticSide)"/>
-              <rect x="120" y="90" width="18" height="56" rx="8" fill="url(#plasticSide)"/>
-              <g class="orb-maze"><circle cx="58" cy="54" r="9" fill="url(#coralG)" filter="url(#ball)"/></g>
-              <g class="orb-maze b"><circle cx="108" cy="108" r="9" fill="url(#tealG)" filter="url(#ball)"/></g>
-              <g class="orb-maze c"><circle cx="78" cy="90" r="9" fill="url(#violetG)" filter="url(#ball)"/></g>
-              </g>
-            </g>
-
-            <!-- glass stand -->
-            <g transform="translate(548,268)">
-              <rect x="0" y="8" width="22" height="52" rx="6" fill="#E8ECFA" opacity=".9"/>
-              <rect x="-8" y="0" width="38" height="12" rx="5" fill="#F8F9FF" stroke="#D7DBF0"/>
-              <circle cx="28" cy="64" r="7" fill="#C9D0E8"/>
-            </g>
-
-            <!-- rings -->
-            <g transform="translate(300,390)">
-              <g class="gizmo-spin">
-                <circle cx="0" cy="0" r="16" fill="none" stroke="#E1E5F5" stroke-width="8"/>
-              </g>
-            </g>
-            <g transform="translate(470,402)">
-              <circle cx="0" cy="0" r="14" fill="none" stroke="#E1E5F5" stroke-width="7"/>
-            </g>
-            <g transform="translate(246,348)">
-              <rect x="0" y="0" width="12" height="28" rx="6" fill="url(#plastic)"/>
-            </g>
-
-            <!-- hopper -->
-            <g transform="translate(612,292)">
-              <g class="hopper">
-                <rect x="0" y="0" width="72" height="48" rx="8" fill="url(#metal)"/>
-                <rect x="4" y="-8" width="64" height="12" rx="3" fill="#9AA3BB"/>
-                <path d="M-6 28 h22 l-8 18 h-22z" fill="#3A4056"/>
-                <g class="cube"><rect x="8" y="38" width="16" height="16" rx="3" fill="url(#violetG)"/></g>
-                <g class="cube c2"><rect x="18" y="42" width="14" height="14" rx="3" fill="#4F46E5"/></g>
-                <g class="cube c3"><rect x="4" y="46" width="13" height="13" rx="3" fill="url(#violetG)"/></g>
-                <g class="cube c4"><rect x="22" y="36" width="12" height="12" rx="3" fill="#818CF8"/></g>
-              </g>
-            </g>
-
-            <!-- tee + amber marble -->
-            <g transform="translate(273,160)">
-              <rect x="-5" y="8" width="10" height="34" rx="5" fill="url(#plastic)"/>
-              <circle class="orb-amber" cx="0" cy="0" r="12" fill="url(#amberG)" filter="url(#ball)"/>
-            </g>
-
-            <!-- loop marbles -->
-            <circle r="8" fill="#D7DEEE" filter="url(#ball)">
-              <animateMotion dur="7.5s" repeatCount="indefinite" path="M 182 248 a 248 132 0 1 1 0 0.1"/>
-            </circle>
-            <circle r="6.5" fill="#C5CCE0" filter="url(#ball)">
-              <animateMotion dur="9.2s" begin="-3.6s" repeatCount="indefinite" path="M 182 248 a 248 132 0 1 1 0 0.1"/>
-            </circle>
-
-            <!-- product pills -->
-            <g transform="translate(96,368) rotate(-18)">
-              <rect class="pill-base pill-store-base" x="0" y="86" width="188" height="54" rx="27" fill="#EEF1FB"/>
-              <rect class="pill-base pill-play-base" x="36" y="44" width="210" height="54" rx="27" fill="#EEF1FB"/>
-              <rect class="pill-base pill-web-base" x="18" y="0" width="176" height="54" rx="27" fill="#EEF1FB"/>
-
-              <g class="pill-label pill-web" fill="#fff">
-                <circle cx="48" cy="27" r="11" fill="none" stroke="#fff" stroke-width="2.4"/>
-                <ellipse cx="48" cy="27" rx="5" ry="11" fill="none" stroke="#fff" stroke-width="2"/>
-                <path d="M37 27h22" stroke="#fff" stroke-width="2"/>
-                <text x="70" y="33" font-family="Sora, Inter, sans-serif" font-size="18" font-weight="700">Website</text>
-              </g>
-              <g class="pill-label pill-play" fill="#fff">
-                <path d="M52 58 l16 13 -16 13z"/>
-                <text x="80" y="77" font-family="Sora, Inter, sans-serif" font-size="16" font-weight="700">Google Play</text>
-              </g>
-              <g class="pill-label pill-store" fill="#fff">
-                <text x="28" y="120" font-family="Sora, Inter, sans-serif" font-size="15" font-weight="700">Available on the App Store</text>
-              </g>
-            </g>
-          </g>
-          </g>
-        </svg>
+        <div class="iso-scene">
+          <div class="iso-world">
+            <div class="tube-spin">
+              <span class="tube-highlight"></span>
+              <span class="chrome-ball"></span>
+              <span class="chrome-ball b2"></span>
+            </div>
+            <div class="arch arch-a"></div>
+            <div class="arch arch-b"></div>
+            <div class="maze">
+              <div class="maze-floor"></div>
+              <div class="mwall m1"></div>
+              <div class="mwall m2"></div>
+              <div class="mwall m3"></div>
+              <div class="mwall m4"></div>
+              <div class="mwall m5"></div>
+              <div class="mwall m6"></div>
+              <span class="marble coral"></span>
+              <span class="marble teal"></span>
+              <span class="marble violet"></span>
+            </div>
+            <div class="stand"></div>
+            <div class="hopper"></div>
+            <span class="cube"></span>
+            <span class="cube c2"></span>
+            <span class="cube c3"></span>
+            <span class="cube c4"></span>
+            <div class="tee"></div>
+            <span class="amber"></span>
+            <span class="ring ring-a"></span>
+            <span class="ring ring-b"></span>
+            <span class="peg"></span>
+            <span class="float-chip"></span>
+            <span class="float-chip s"></span>
+            <div class="slabs">
+              <div class="slab slab-web"><i></i><span>Website</span></div>
+              <div class="slab slab-play"><i></i><span>Google Play</span></div>
+              <div class="slab slab-store"><i></i><span>Available on the App Store</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
