@@ -48,8 +48,22 @@ export default function App() {
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<GuestOnly><Login /></GuestOnly>} />
-            <Route path="/register" element={<GuestOnly><Register /></GuestOnly>} />
+            <Route
+              path="/login"
+              element={
+                <GuestOnly>
+                  <Login />
+                </GuestOnly>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <GuestOnly>
+                  <Register />
+                </GuestOnly>
+              }
+            />
             <Route path="/verify" element={<Verify />} />
             <Route path="/winners" element={<Winners />} />
             <Route path="/lucky-draw" element={<LuckyDraw />} />

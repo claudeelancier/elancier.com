@@ -83,9 +83,7 @@ export default function SpinArena() {
     }
   }
 
-  if (!prizes.length && !error) return <WheelSkeleton />
-
-  const locked = !canSpin() || spinState === SPIN_STATES.requesting || spinning
+  const locked = !canSpin() || spinState === SPIN_STATES.requesting || spinning || !prizes.length
   const noSpins = (user?.spins ?? 0) <= 0
 
   return (
@@ -115,12 +113,11 @@ export default function SpinArena() {
         </GlassCard>
 
         <div className="order-1 lg:order-2" ref={wrapRef}>
-          <PrizeWheel
-            prizes={prizes}
-            rotation={rotation}
-            spinning={spinning}
-            onTick={() => play('tick')}
-          />
+          {prizes.length ? (
+            <PrizeWheel prizes={prizes} rotation={rotation} spinning={spinning} onTick={() => play('tick')} />
+          ) : (
+            <WheelSkeleton />
+          )}
           <div className="mt-8 flex flex-col items-center">
             <PrimaryButton onClick={spin} disabled={locked} className="min-w-[220px]">
               {spinning || spinState === SPIN_STATES.requesting ? 'SPINNING...' : noSpins ? 'NO SPINS LEFT' : 'SPIN NOW'}
@@ -132,7 +129,7 @@ export default function SpinArena() {
         <div className="order-3 grid gap-4">
           <StatCard label="Your spins" value={user?.spins ?? 0} />
           <StatCard label="Total wins" value={user?.totalWins ?? 0} gold />
-          <StatCard label="Rewards value" value={`₹${user?.totalRewardsValue ?? 0}`} />
+          <StatCard label="Rewards value" value={`₹${(user?.totalRewardsValue ?? 0).toLocaleString('en-IN')}`} />
         </div>
       </div>
 

@@ -18,6 +18,8 @@ const ICONS = {
 export function PrizeWheel({ prizes, rotation, spinning, onTick, duration = 5 }) {
   const wheelRef = useRef(null)
   const pointerRef = useRef(null)
+  const onTickRef = useRef(onTick)
+  onTickRef.current = onTick
   const lastSeg = useRef(0)
   const reduced = useReducedMotion()
   const uid = useId().replace(/:/g, '')
@@ -60,7 +62,7 @@ export function PrizeWheel({ prizes, rotation, spinning, onTick, duration = 5 })
         const underPointer = Math.floor(((360 - normalized) % 360) / slice) % count
         if (underPointer !== lastSeg.current) {
           lastSeg.current = underPointer
-          onTick?.()
+          onTickRef.current?.()
           if (pointerRef.current) {
             gsap.fromTo(pointerRef.current, { rotate: -14 }, { rotate: 0, duration: 0.14, ease: 'back.out(3)' })
           }
@@ -68,7 +70,7 @@ export function PrizeWheel({ prizes, rotation, spinning, onTick, duration = 5 })
       },
     })
     return () => tween.kill()
-  }, [rotation, spinning, reduced, slice, count, onTick, duration])
+  }, [rotation, spinning, reduced, slice, count, duration])
 
   return (
     <div className="relative mx-auto w-[min(78vw,520px)] select-none" style={{ aspectRatio: '1' }}>

@@ -33,11 +33,11 @@ export default function Dashboard() {
     return <ErrorState title={copy.title} body={copy.body} onRetry={() => window.location.reload()} />
   }
 
-  const stats = dashboard?.stats || {
-    spins: user?.spins ?? 0,
-    totalRewards: user?.totalRewardsValue ?? 0,
-    totalWins: user?.totalWins ?? 0,
-    drawEntries: user?.drawEntries ?? 0,
+  const stats = {
+    spins: user?.spins ?? dashboard?.stats?.spins ?? 0,
+    totalRewards: user?.totalRewardsValue ?? dashboard?.stats?.totalRewards ?? 0,
+    totalWins: user?.totalWins ?? dashboard?.stats?.totalWins ?? 0,
+    drawEntries: user?.drawEntries ?? dashboard?.stats?.drawEntries ?? 0,
   }
 
   return (

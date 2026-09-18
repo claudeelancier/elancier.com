@@ -51,9 +51,9 @@ export default function LuckyDraw() {
         </div>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <SecondaryButton onClick={() => setHow(true)}>HOW IT WORKS</SecondaryButton>
-          {(user?.role === 'admin' || count.done) && (
-            <PrimaryButton onClick={() => setLive(true)}>Watch live draw</PrimaryButton>
-          )}
+          <PrimaryButton onClick={() => setLive(true)}>
+            {count.done ? 'Watch live draw' : 'Preview live draw'}
+          </PrimaryButton>
         </div>
         <p className="mt-4 text-sm text-white/40">
           {user ? `Entry status: ${draw?.userEntries ? `${draw.userEntries} tickets locked in` : 'No entries yet'}` : 'Login to see your entry status.'}
@@ -106,13 +106,15 @@ function LiveDraw({ participants, onDone, onClose }) {
   const reduced = useReducedMotion()
   const idx = useRef({ i: 0 })
   const obj = useRef({ t: 0 })
+  const onDoneRef = useRef(onDone)
+  onDoneRef.current = onDone
 
   useEffect(() => {
     const winner = participants[0]
     if (reduced) {
       setName(winner.name)
       fireDrawConfetti()
-      const t = setTimeout(() => onDone(winner), 600)
+      const t = setTimeout(() => onDoneRef.current(winner), 600)
       return () => clearTimeout(t)
     }
     const state = obj.current
@@ -122,26 +124,23 @@ function LiveDraw({ participants, onDone, onClose }) {
       duration: 4.8,
       ease: 'power4.out',
       onUpdate() {
-        const speed = 1 - state.t
-        const step = speed > 0.2 ? 1 : state.t * 10 % 1 < speed ? 1 : 0
-        if (speed > 0.05) {
-          idx.current.i = (idx.current.i + Math.max(1, Math.round(speed * 3))) % participants.length
-          setName(participants[idx.current.i].name)
-        } else {
-          setName(winner.name)
-        }
+          const nextName = speed > 0.05 ? participants[idx.current.i].name : winner.name
+          if (speed > 0.05) {
+            idx.current.i = (idx.current.i + Math.max(1, Math.round(speed * 3))) % participants.length
+          }
+          setName((prev) => (prev === nextName ? prev : nextName))
       },
       onComplete() {
         setName(winner.name)
         fireDrawConfetti()
-        setTimeout(() => onDone(winner), 900)
+        setTimeout(() => onDoneRef.current(winner), 900)
       },
     })
     return () => tween.kill()
-  }, [participants, onDone, reduced])
+  }, [participants, reduced])
 
   return (
-    <div className="fixed inset-0 z-[70] grid place-items-center bg-[#080B1A]/86 px-4">
+    <div className="fixed inset-0 z-[90] grid place-items-center bg-[#080B1A]/86 px-4">
       <button className="absolute inset-0" aria-label="Close live draw" onClick={onClose} />
       <div className="relative w-full max-w-xl rounded-[28px] border border-[#FFD166]/25 bg-[#10152B] p-8 text-center shadow-[0_0_80px_rgba(255,209,102,0.12)]">
         <div className="mx-auto mb-6 h-24 w-24 rounded-full bg-[#FFD166]/15 blur-0 ring-4 ring-[#FFD166]/30" />

@@ -1,8 +1,9 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { LayoutDashboard, Users, Gift, RotateCw, Ticket, Trophy, BarChart3, Settings, ScrollText, LogOut, Menu, X, Wallet } from 'lucide-react'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { useAuthStore } from '../store/authStore'
 import { ToastViewport } from '../components/common/Toast'
+import { LoadingState } from '../components/common/States'
 
 const nav = [
   { to: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -67,7 +68,15 @@ export function AdminLayout() {
             <p className="text-sm text-white/50">SaaS control centre</p>
           </header>
           <div className="p-4 lg:p-8">
-            <Outlet />
+            <Suspense
+              fallback={
+                <div className="grid min-h-[30vh] place-items-center">
+                  <LoadingState label="Loading console" />
+                </div>
+              }
+            >
+              <Outlet />
+            </Suspense>
           </div>
         </div>
       </div>

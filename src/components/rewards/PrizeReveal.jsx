@@ -13,7 +13,7 @@ export function PrizeReveal({ open, result, onClaim, onView, onClose }) {
   return (
     <AnimatePresence>
       {open ? (
-        <motion.div className="fixed inset-0 z-[70] grid place-items-center px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <motion.div className="fixed inset-0 z-[90] grid place-items-center px-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
           <div className="absolute inset-0 bg-[#080B1A]/78 backdrop-blur-sm" />
           <motion.div
             initial={{ scale: 0.86, opacity: 0 }}

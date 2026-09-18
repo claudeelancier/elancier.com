@@ -1,6 +1,8 @@
 import { create } from 'zustand'
 import { api } from '../services/api'
 import { useAuthStore } from './authStore'
+import { prizes as seedPrizes } from '../data/mockData'
+import { nextSpinRotation } from '../utils/wheel'
 
 export const SPIN_STATES = {
   idle: 'idle',
@@ -15,14 +17,14 @@ export const SPIN_STATES = {
 export const useGameStore = create((set, get) => ({
   spinState: SPIN_STATES.idle,
   result: null,
-  prizes: [],
+  prizes: seedPrizes.filter((prize) => prize.status === 'active'),
   rewards: [],
   history: [],
   winners: [],
   dashboard: null,
   draw: null,
   error: null,
-  lastRotation: 0,
+  lastRotation: nextSpinRotation(0, 0, 8, 0),
 
   resetSpin() {
     set({ spinState: SPIN_STATES.idle, result: null, error: null })
