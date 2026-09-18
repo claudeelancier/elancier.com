@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-numeric: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #080b1a;
+  --color-bg-secondary: #10152b;
+  --color-purple: #6c5ce7;
+  --color-electric: #00d4ff;
+  --color-gold: #ffd166;
+  --color-success: #2ed573;
+  --color-danger: #ff4757;
+  --color-card: rgba(255, 255, 255, 0.06);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-muted: rgba(226, 232, 255, 0.62);
+  --color-ink: #f4f6ff;
+
+  --radius-card: 24px;
+  --radius-btn: 16px;
+  --shadow-glow: 0 18px 50px rgba(108, 92, 231, 0.22);
+}
+
+html {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-numeric {
+  font-family: var(--font-numeric);
+}
+
+::selection {
+  background: rgba(108, 92, 231, 0.4);
+}
+
+:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 3px;
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6c5ce7, #00d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #ffe29a, #ffd166 45%, #f7b733);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-gradient {
+  background: linear-gradient(135deg, #6c5ce7, #00d4ff);
+}
+
+.ambient-grid {
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(108, 92, 231, 0.22), transparent 45%),
+    radial-gradient(ellipse at 90% 10%, rgba(0, 212, 255, 0.12), transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
