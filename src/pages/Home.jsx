@@ -111,6 +111,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section>
+        <SectionTitle title="Arcade" subtitle="Forty original games with touch controls, scored runs, and a different idea every time." />
+        <GlassCard className="flex flex-col items-start justify-between gap-5 p-6 sm:flex-row sm:items-center">
+          <p className="max-w-xl text-white/65">
+            Run, aim, untangle, and keep time. The arcade is free to open, built for phones, and each game stands on its own.
+          </p>
+          <a href="/arcade/index.html" className="cta-gradient inline-flex min-h-[54px] items-center justify-center rounded-[16px] px-6 font-semibold text-white">
+            Enter arcade
+          </a>
+        </GlassCard>
+      </section>
+
       <motion.section
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
