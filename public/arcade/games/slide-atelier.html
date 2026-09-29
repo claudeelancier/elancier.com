@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#141018" />
+  <title>Slide Atelier · Luckyverse Arcade</title>
+  <link rel="icon" href="../../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shell.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <a class="icon-btn" href="../index.html">Arcade</a>
+      <div class="hud-mid">
+        <p id="hud-title"></p>
+        <p class="scores"><span id="score">0</span> <span>best <span id="best">0</span></span></p>
+        <p id="meta"></p>
+      </div>
+      <button id="pause-btn" class="icon-btn" type="button">Pause</button>
+      <button id="mute-btn" class="icon-btn" type="button" aria-label="Mute">Sound</button>
+    </header>
+    <canvas id="stage"></canvas>
+    <div id="controls"></div>
+    <div id="overlay">
+      <section id="menu-box" class="panel">
+        <p class="kicker">Luckyverse Arcade</p>
+        <h1 id="g-title"></h1>
+        <p id="g-blurb"></p>
+        <p id="g-hint" class="hint"></p>
+        <button id="play-btn" class="primary" type="button">Play</button>
+      </section>
+      <section id="pause-box" class="panel" hidden>
+        <h2>Paused</h2>
+        <p>The world is holding still.</p>
+        <button id="resume-btn" class="primary" type="button">Resume</button>
+      </section>
+      <section id="over-box" class="panel" hidden>
+        <p class="kicker">Score</p>
+        <p id="over-score" class="big">0</p>
+        <h2 id="over-title"></h2>
+        <p id="over-sub"></p>
+        <button id="again-btn" class="primary" type="button">Play again</button>
+      </section>
+    </div>
+  </div>
+  <script src="../engine.js"></script>
+  <script src="./slide-atelier.js"></script>
+</body>
+</html>

@@ -60,6 +60,9 @@ export function Header() {
               {link.label}
             </NavLink>
           ))}
+          <a href="/arcade/index.html" onClick={playClick} className="rounded-full px-4 py-2 text-sm font-medium text-white/60 hover:text-white">
+            Arcade
+          </a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -160,6 +163,9 @@ export function Header() {
                     {link.label}
                   </NavLink>
                 ))}
+                <a href="/arcade/index.html" className="rounded-xl px-3 py-3 text-white/80 hover:bg-white/6" onClick={() => setOpen(false)}>
+                  Arcade
+                </a>
                 {user ? (
                   <>
                     <NavLink to="/dashboard" onClick={() => setOpen(false)} className="rounded-xl px-3 py-3 hover:bg-white/6">
