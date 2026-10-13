@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.Northstar" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#101417</item>
+        <item name="android:navigationBarColor">#101417</item>
+        <item name="android:windowBackground">#101417</item>
+    </style>
+</resources>
