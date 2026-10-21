@@ -1,5 +1,7 @@
 # Luckyverse
 
+The offline supermarket billing demonstration (Flutter, Laravel, and PostgreSQL) is in [`offline-billing-demo`](offline-billing-demo/README.md).
+
 Premium promotional rewards platform: **Spin. Win. Celebrate.**
 
 ## Run

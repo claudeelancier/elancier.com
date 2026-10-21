@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Debug installs may call a local HTTP Laravel API on an emulator or LAN IP.
+         Release builds keep cleartext limited to the hosts in network_security_config.xml. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic"
+        tools:targetApi="28" />
+</manifest>
